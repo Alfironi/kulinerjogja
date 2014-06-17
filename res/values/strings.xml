@@ -1,5 +1,12 @@
 <resources>
 
     <string name="app_name">Kuliner Jogja</string>
-
+    <string name="tambah_lokasi">Tambah Lokasi Kuliner</string>
+<string name="nama">Nama</string>
+<string name="alamat">Alamat</string>
+<string name="deskripsi">Deskripsi</string>
+<string name="telp">Telp</string>
+<string name="harga">Harga</string>
+<string name="jam_buka">Jam Buka</string>
+<string name="pilih_foto">Pilih Foto</string>
 </resources>
