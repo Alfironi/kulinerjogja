@@ -19,4 +19,11 @@
     <dimen name="font_size_medium">15sp</dimen>
     <dimen name="font_size_large">20sp</dimen>
     <dimen name="font_size_xlarge">25sp</dimen>
+    
+    <dimen name="size_logo_splash">200dp</dimen>
+    <dimen name="menu_image_size">50dp</dimen>
+    
+    <dimen name="line_small">1dp</dimen>
+    <dimen name="line_medium">2dp</dimen>
+    <dimen name="line_large">3dp</dimen>
 </resources>
