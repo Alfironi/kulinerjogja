@@ -19,5 +19,9 @@
     <color name="orange_light">#F29D35</color>
     <color name="orange">#F86B25</color>
     <color name="violet">#7B0899</color>
+    <color name="brown">#4c2901</color>
+    <color name="blue">#33b5e5</color>
+    <color name="yellow">#ffa504</color>
+    <color name="dark_blue">#343d78</color>
 
 </resources>

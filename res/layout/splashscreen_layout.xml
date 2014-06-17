@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app" >
+
+    <ImageView
+        android:id="@+id/logo_splashscreen"
+        android:layout_width="@dimen/size_logo_splash"
+        android:layout_height="@dimen/size_logo_splash"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_splashscreen"
+        android:layout_marginTop="@dimen/padding_small"
+        android:text="@string/kuliner_jogja"
+        android:textStyle="bold"
+        android:textColor="@color/brown"
+        android:textSize="@dimen/font_size_large" />
+
+</RelativeLayout>

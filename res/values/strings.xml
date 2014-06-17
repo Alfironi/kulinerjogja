@@ -1,6 +1,8 @@
 <resources>
 
     <string name="app_name">Kuliner Jogja</string>
+    <string name="kuliner_jogja">KULINER JOGJA</string>
+    <string name="login">Login</string>
     <string name="tambah_lokasi">Tambah Lokasi Kuliner</string>
     <string name="nama">Nama</string>
     <string name="alamat">Alamat</string>
@@ -12,7 +14,6 @@
     <string name="titik_dua">:</string>
     <string name="simpan">Simpan</string>
     <string name="batal">Batal</string>
-    <string name="kuliner_terdekat">Kuliner Terdekat</string>
     <string name="kuliner_terdekat2">Kuliner yang terdekat dengan anda :</string>
     <string name="_100">&#8226; 100 m</string>
     <string name="_200">&#8226; 200 m</string>
@@ -20,5 +21,23 @@
     <string name="detail_kuliner">Detail Kuliner</string>
     <string name="ke_lokasi">Ke Lokasi</string>
     <string name="bagikan">Bagikan</string>
+    <string name="pencarian_kuliner">Pencarian Kuliner</string>
+    <string name="kuliner_terdekat">Kuliner Terdekat</string>
+    <string name="rating_kuliner">Rating Kuliner</string>
+    <string name="tambah_kuliner">Tambah Kuliner</string>
+    <string name="kategori_kuliner">Kategori Kuliner</string>
+    <string name="daftar_member">Daftar Member</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="jenis_kelamin">jenis kelamin</string>
+    <string name="laki_laki">Laki-laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="daftar">Daftar</string>
+    <string name="nusantara">Nusantara</string>
+    <string name="asia">Asia</string>
+    <string name="lainnya">Lainnya</string>
+    <string name="cari_makanan_lbl">Tulis nama makanan yang ingin dicari</string>
+    <string name="cari_makanan">cari makanan ...</string>
 
 </resources>
