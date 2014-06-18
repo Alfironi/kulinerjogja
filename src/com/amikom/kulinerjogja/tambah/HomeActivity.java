@@ -1,6 +1,7 @@
 package com.amikom.kulinerjogja.tambah;
 
 import com.amikom.kulinerjogja.login.LoginActivity;
+import com.amikom.kulinerjogja.menu.MenuActivity;
 import com.amikom.kulinerjogja.utils.Constant;
 
 import android.app.Activity;
@@ -22,6 +23,10 @@ public class HomeActivity extends Activity{
         
         if (!mSharedPreferences.getBoolean(Constant.IS_LOGIN, false)) {
 			startActivity(new Intent(this, LoginActivity.class));
+			finish();
+		}else{
+			startActivity(new Intent(this, MenuActivity.class));
+			finish();
 		}
 	}
 }
