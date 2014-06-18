@@ -30,6 +30,10 @@
         </activity>
         <activity android:name="com.amikom.kulinerjogja.tambah.TambahLokasiActivity" >
         </activity>
+        <activity android:name="com.amikom.kulinerjogja.login.LoginActivity" >
+        </activity>
+        <activity android:name="com.amikom.kulinerjogja.menu.MenuActivity"></activity>
+        <activity android:name="com.amikom.kulinerjogja.login.RegisterActivity"></activity>
     </application>
 
 </manifest>
