@@ -1,18 +1,16 @@
 
-package com.amikom.kulinerjogja.terdekat;
+package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Window;
 
-public class DetailKulinerActivity extends Activity {
+public class PencarianActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detail_kuliner_layout);
+        setContentView(R.layout.search_layout);
     }
 }

@@ -2,7 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_app"
     android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/kuliner_jogja"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_large"
+        android:background="@color/blue" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,7 +28,7 @@
         android:layout_marginBottom="@dimen/padding_xlarge"
         android:layout_marginTop="@dimen/padding_large"
         android:text="@string/kuliner_terdekat"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_large"
         android:textStyle="bold" />
 
@@ -20,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
         android:text="@string/_100"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_medium"
         android:textStyle="bold" />
 
@@ -28,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
         android:text="@string/_200"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_medium"
         android:textStyle="bold" />
 
@@ -36,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
         android:text="@string/_300"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_medium"
         android:textStyle="bold" />
 

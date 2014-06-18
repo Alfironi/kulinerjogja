@@ -30,24 +30,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/login_menu_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:padding="@color/black"
-                android:text="@string/login"
-                android:textSize="@dimen/font_size_medium" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xlarge"
                 android:orientation="horizontal"
                 android:weightSum="2" >
 
                 <LinearLayout
                     android:id="@+id/search_menu_layout"
                     android:layout_width="0dp"
+                android:layout_marginTop="@dimen/padding_xlarge"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
@@ -61,8 +54,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@color/black"
+                        android:gravity="center"
                         android:text="@string/pencarian_kuliner"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/font_size_medium" />
                 </LinearLayout>
 
@@ -70,6 +64,7 @@
                     android:id="@+id/near_menu_layout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xlarge"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical" >
@@ -82,8 +77,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@color/black"
+                        android:gravity="center"
                         android:text="@string/kuliner_terdekat"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/font_size_medium" />
                 </LinearLayout>
             </LinearLayout>
@@ -92,6 +88,7 @@
                 android:id="@+id/category_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xlarge"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -103,14 +100,16 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@color/black"
+                    android:gravity="center"
                     android:text="@string/kategori_kuliner"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/font_size_medium" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xlarge"
                 android:orientation="horizontal"
                 android:weightSum="2" >
 
@@ -130,8 +129,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@color/black"
+                        android:gravity="center"
                         android:text="@string/rating_kuliner"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/font_size_medium" />
                 </LinearLayout>
 
@@ -151,8 +151,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@color/black"
+                        android:gravity="center"
                         android:text="@string/tambah_kuliner"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/font_size_medium" />
                 </LinearLayout>
             </LinearLayout>

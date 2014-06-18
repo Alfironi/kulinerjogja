@@ -32,8 +32,15 @@
         </activity>
         <activity android:name="com.amikom.kulinerjogja.login.LoginActivity" >
         </activity>
-        <activity android:name="com.amikom.kulinerjogja.menu.MenuActivity"></activity>
         <activity android:name="com.amikom.kulinerjogja.login.RegisterActivity"></activity>
+        <activity android:name="com.amikom.kulinerjogja.ui.KategoriActivity" >
+        </activity>
+        <activity android:name="com.amikom.kulinerjogja.ui.MenuActivity" >
+        </activity>
+        <activity android:name="com.amikom.kulinerjogja.ui.PencarianActivity" >
+        </activity>
+        <activity android:name="com.amikom.kulinerjogja.ui.RatingActivity" >
+        </activity>
     </application>
 
 </manifest>

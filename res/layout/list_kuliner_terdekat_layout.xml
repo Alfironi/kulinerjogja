@@ -2,7 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_app"
     android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/kuliner_jogja"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_large"
+        android:background="@color/blue" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,19 +36,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/padding_xlarge"
-        android:layout_marginTop="@dimen/padding_large"
         android:layout_marginLeft="@dimen/padding_medium"
         android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_large"
         android:text="@string/kuliner_terdekat2"
         android:textColor="@color/black"
         android:textSize="@dimen/font_size_medium" />
-    
-    <ListView 
+
+    <ListView
         android:id="@+id/list_kuliner_terdekat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/padding_medium"
-        android:layout_marginRight="@dimen/padding_medium"
-        ></ListView>
+        android:layout_marginRight="@dimen/padding_medium" >
+    </ListView>
 
 </LinearLayout>
