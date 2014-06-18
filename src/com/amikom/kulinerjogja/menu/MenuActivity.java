@@ -1,9 +1,12 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.amikom.kulinerjogja.menu;
 
 import com.amikom.kulinerjogja.R;
+import com.amikom.kulinerjogja.kategori.KategoriActivity;
+import com.amikom.kulinerjogja.pencarian.PencarianActivity;
 import com.amikom.kulinerjogja.tambah.TambahLokasiActivity;
 import com.amikom.kulinerjogja.terdekat.KulinerTerdekatActivity;
+import com.amikom.kulinerjojga.rating.RatingActivity;
 
 import android.app.Activity;
 import android.content.Intent;

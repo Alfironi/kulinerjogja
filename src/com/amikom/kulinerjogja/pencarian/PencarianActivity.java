@@ -1,16 +1,18 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.amikom.kulinerjogja.pencarian;
 
 import com.amikom.kulinerjogja.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
 
-public class RatingActivity extends Activity {
+public class PencarianActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rating_layout);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.search_layout);
     }
 }

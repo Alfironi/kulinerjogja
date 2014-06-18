@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.logging.LogManager;
 
 import com.amikom.kulinerjogja.R;
+import com.amikom.kulinerjogja.menu.MenuActivity;
 import com.amikom.kulinerjogja.model.UserModel;
-import com.amikom.kulinerjogja.ui.MenuActivity;
 import com.amikom.kulinerjogja.utils.Constant;
 import com.amikom.kulinerjogja.utils.DBAdapter;
 
