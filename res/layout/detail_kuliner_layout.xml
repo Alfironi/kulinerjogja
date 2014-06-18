@@ -189,6 +189,15 @@
                 android:gravity="center"
                 android:text="@string/bagikan" />
         </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:numStars="5"
+            android:rating="2.5"
+            android:stepSize="1.0" />
     </LinearLayout>
 
 </ScrollView>
