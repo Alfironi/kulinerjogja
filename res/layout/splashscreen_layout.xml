@@ -16,9 +16,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_splashscreen"
         android:layout_marginTop="@dimen/padding_small"
+        android:gravity="center"
         android:text="@string/kuliner_jogja"
-        android:textStyle="bold"
         android:textColor="@color/brown"
-        android:textSize="@dimen/font_size_large" />
+        android:textSize="@dimen/font_size_xlarge"
+        android:textStyle="bold" />
 
 </RelativeLayout>
