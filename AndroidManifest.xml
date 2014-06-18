@@ -32,7 +32,7 @@
         </activity>
         <activity android:name="com.amikom.kulinerjogja.ui.KategoriActivity" >
         </activity>
-        <activity android:name="com.amikom.kulinerjogja.ui.MenuActivity" >
+        <activity android:name="com.amikom.kulinerjogja.menu.MenuActivity" >
         </activity>
         <activity android:name="com.amikom.kulinerjogja.ui.PencarianActivity" >
         </activity>

@@ -2,6 +2,7 @@
 package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
+import com.amikom.kulinerjogja.menu.MenuActivity;
 
 import android.app.Activity;
 import android.content.Intent;
