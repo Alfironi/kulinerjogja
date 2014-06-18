@@ -1,5 +1,5 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.amikom.kulinerjogja.pencarian;
 
 import com.amikom.kulinerjogja.R;
 
