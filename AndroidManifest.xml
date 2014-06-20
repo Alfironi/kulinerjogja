@@ -7,6 +7,11 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -32,7 +37,8 @@
         </activity>
         <activity android:name="com.amikom.kulinerjogja.login.LoginActivity" >
         </activity>
-        <activity android:name="com.amikom.kulinerjogja.login.RegisterActivity"></activity>
+        <activity android:name="com.amikom.kulinerjogja.login.RegisterActivity" >
+        </activity>
         <activity android:name="com.amikom.kulinerjogja.kategori.KategoriActivity" >
         </activity>
         <activity android:name="com.amikom.kulinerjogja.menu.MenuActivity" >
