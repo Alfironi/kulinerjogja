@@ -39,18 +39,24 @@
         android:textSize="@dimen/font_size_medium" />
 
     <EditText
-        android:id="@+id/search_makanan"
+        android:id="@+id/field_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_small"
         android:hint="@string/cari_makanan"
-        android:textColor="@color/white"
         android:textSize="@dimen/font_size_medium" />
 
     <ListView
         android:id="@+id/listview_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:cacheColorHint="@android:color/transparent">
     </ListView>
+
+    <ProgressBar
+        android:id="@+id/progress_search"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone" />
 
 </LinearLayout>
