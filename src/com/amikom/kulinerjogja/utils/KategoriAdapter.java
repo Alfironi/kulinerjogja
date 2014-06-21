@@ -1,7 +1,8 @@
 
-package com.amikom.kulinerjogja.kategori;
+package com.amikom.kulinerjogja.utils;
 
 import com.amikom.kulinerjogja.R;
+import com.amikom.kulinerjogja.model.KategoriModel;
 
 import android.app.Activity;
 import android.content.Context;

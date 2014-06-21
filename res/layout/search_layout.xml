@@ -26,6 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
         android:text="@string/pencarian_kuliner"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_large" />
@@ -34,6 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
         android:text="@string/cari_makanan_lbl"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_medium" />
@@ -43,20 +47,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:background="@drawable/bg_field"
         android:hint="@string/cari_makanan"
+        android:padding="@dimen/padding_medium"
         android:textSize="@dimen/font_size_medium" />
 
     <ListView
         android:id="@+id/listview_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:cacheColorHint="@android:color/transparent">
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:dividerHeight="@dimen/padding_small"
+        android:divider="@android:color/transparent"
+    android:layout_marginLeft="@dimen/padding_small"
+    android:layout_marginRight="@dimen/padding_small"
+        android:scrollbars="none" >
     </ListView>
 
     <ProgressBar
         android:id="@+id/progress_search"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
         android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_koneksi_pencarian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:textSize="@dimen/font_size_large"
+        android:text="Gagal load data, ada masalah dengna Koneksi !" />
 
 </LinearLayout>

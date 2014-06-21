@@ -1,4 +1,4 @@
-package com.amikom.kulinerjogja.pencarian;
+package com.amikom.kulinerjogja.ui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.kategori.KategoriModel;
+import com.amikom.kulinerjogja.model.KategoriModel;
 import com.amikom.kulinerjogja.model.MakananModel;
-import com.amikom.kulinerjogja.terdekat.DetailKulinerActivity;
+import com.amikom.kulinerjogja.utils.PencarianAdapter;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -29,12 +29,14 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class PencarianActivity extends Activity{
 
 	private EditText searchField;
 	private ListView listview;
 	private ProgressBar progressBar;
+	private TextView status;
 
 	private List<MakananModel> listMakanan;
 	private PencarianAdapter adapter;
@@ -52,6 +54,8 @@ public class PencarianActivity extends Activity{
 		searchField = (EditText) findViewById(R.id.field_search);
 		listview = (ListView) findViewById(R.id.listview_search);
 		progressBar = (ProgressBar) findViewById(R.id.progress_search);
+		status = (TextView) findViewById(R.id.status_koneksi_pencarian);
+		status.setVisibility(View.GONE);
 		searchField.addTextChangedListener(new TextWatcher() {
 
 			@Override
@@ -139,6 +143,7 @@ public class PencarianActivity extends Activity{
 			public void onFailure(int statusCode, Header[] headers,
 					String responseBody, Throwable e) {
 				Log.e("Failure", "Failure : " + statusCode);
+				status.setVisibility(View.VISIBLE);
 			}
 
 		});

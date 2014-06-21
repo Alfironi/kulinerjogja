@@ -1,10 +1,9 @@
-package com.amikom.kulinerjogja.login;
+package com.amikom.kulinerjogja.ui;
 
 import java.util.List;
 import java.util.logging.LogManager;
 
 import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.menu.MenuActivity;
 import com.amikom.kulinerjogja.model.UserModel;
 import com.amikom.kulinerjogja.utils.Constant;
 import com.amikom.kulinerjogja.utils.DBAdapter;
@@ -59,10 +58,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 			login();
 			break;
 		case R.id.register_btn:
-			Log.d("Login", "Register___");
 			startActivity(new Intent(this, RegisterActivity.class));
-			Log.d("Login", "Register...");
-			finish();
 			break;
 		default:
 			break;

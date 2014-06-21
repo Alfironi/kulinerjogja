@@ -1,8 +1,9 @@
 
-package com.amikom.kulinerjogja.kategori;
+package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.terdekat.DetailKulinerActivity;
+import com.amikom.kulinerjogja.model.KategoriModel;
+import com.amikom.kulinerjogja.utils.KategoriAdapter;
 import com.amikom.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;

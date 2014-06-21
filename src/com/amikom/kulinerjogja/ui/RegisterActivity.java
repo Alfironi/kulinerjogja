@@ -1,8 +1,7 @@
-package com.amikom.kulinerjogja.login;
+package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.model.UserModel;
-import com.amikom.kulinerjogja.menu.MenuActivity;
 import com.amikom.kulinerjogja.utils.DBAdapter;
 
 import android.app.Activity;

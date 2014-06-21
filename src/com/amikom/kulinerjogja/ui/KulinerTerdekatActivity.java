@@ -1,5 +1,4 @@
-
-package com.amikom.kulinerjogja.terdekat;
+package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
 

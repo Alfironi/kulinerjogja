@@ -1,7 +1,8 @@
 
-package com.amikom.kulinerjojga.rating;
+package com.amikom.kulinerjogja.utils;
 
 import com.amikom.kulinerjogja.R;
+import com.amikom.kulinerjogja.model.RatingModel;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,5 +1,5 @@
 
-package com.amikom.kulinerjogja.tambah;
+package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.utils.LogManager;

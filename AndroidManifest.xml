@@ -37,26 +37,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.amikom.kulinerjogja.terdekat.DetailKulinerActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.terdekat.KulinerTerdekatActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.terdekat.ListKulinerTerdekatActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.tambah.TambahLokasiActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.login.LoginActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.login.RegisterActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.kategori.KategoriActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.menu.MenuActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjogja.pencarian.PencarianActivity" >
-        </activity>
-        <activity android:name="com.amikom.kulinerjojga.rating.RatingActivity" >
-        </activity>
+        <activity android:name="com.amikom.kulinerjogja.ui.DetailKulinerActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.KategoriActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.KulinerTerdekatActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.ListKulinerTerdekatActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.LoginActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.MenuActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.PencarianActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.RatingActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.RegisterActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.TambahLokasiActivity"/>
     </application>
 
 </manifest>
