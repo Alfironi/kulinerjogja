@@ -13,7 +13,7 @@
         android:padding="@dimen/padding_small"
         android:text="@string/kuliner_jogja"
         android:textColor="@color/white"
-        android:textSize="@dimen/font_size_large"
+        android:textSize="@dimen/font_size_xlarge"
         android:textStyle="bold" />
 
     <View
@@ -33,30 +33,33 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/m100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
         android:text="@string/_100"
         android:textColor="@color/white"
-        android:textSize="@dimen/font_size_medium"
+        android:textSize="@dimen/font_size_large"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/m200"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
         android:text="@string/_200"
         android:textColor="@color/white"
-        android:textSize="@dimen/font_size_medium"
+        android:textSize="@dimen/font_size_large"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/m300"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
         android:text="@string/_300"
         android:textColor="@color/white"
-        android:textSize="@dimen/font_size_medium"
+        android:textSize="@dimen/font_size_large"
         android:textStyle="bold" />
 
 </LinearLayout>
