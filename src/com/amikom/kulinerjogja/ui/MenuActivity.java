@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class MenuActivity extends Activity implements OnClickListener {
+
     private LinearLayout mSearch, mNear, mKategori, mRating, mTambah;
     private TextView textAddress;
     private Geocoder geocoder;
@@ -98,6 +99,8 @@ public class MenuActivity extends Activity implements OnClickListener {
             geocoder = new Geocoder(MenuActivity.this, Locale.getDefault());
             try {
                 address = geocoder.getFromLocation(latitude, longitude, 1);
+                // address = geocoder.getFromLocation(-6.2192001,106.8201898,
+                // 1);
                 add = address.get(0).getAddressLine(0);
                 city = address.get(0).getAddressLine(1);
                 country = address.get(0).getAddressLine(2);
@@ -114,7 +117,7 @@ public class MenuActivity extends Activity implements OnClickListener {
                         + " " + country);
             } else {
                 textAddress
-                        .setText("Posisi Anda gagal diload. Ada masalah dengan koneksi internet.");
+                        .setText("Posisi Anda gagal diload. Ada masalah dengan koneksi GPS.");
             }
             super.onPostExecute(result);
         }

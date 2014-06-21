@@ -16,7 +16,10 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +29,8 @@ public class RatingActivity extends Activity {
     private List<RatingModel> mItems;
     private RatingAdapter mAdapter;
     private Context mContext;
+    private ProgressBar progress;
+    private TextView status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,9 @@ public class RatingActivity extends Activity {
     private void initView() {
         mListView = (ListView) findViewById(R.id.list_rating);
         mItems = new ArrayList<RatingModel>();
+        progress = (ProgressBar) findViewById(R.id.progress_rating);
+        status = (TextView) findViewById(R.id.status_koneksi_rating);
+        status.setVisibility(View.GONE);
         mAdapter = new RatingAdapter(mContext, mItems);
         mListView.setAdapter(mAdapter);
     }
@@ -56,12 +64,13 @@ public class RatingActivity extends Activity {
             public void onStart() {
                 // TODO Auto-generated method stub
                 LogManager.print("Rating onStart");
-
+                progress.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFinish() {
                 LogManager.print("Rating onFinish");
+                progress.setVisibility(View.GONE);
             }
 
             @Override
@@ -86,73 +95,12 @@ public class RatingActivity extends Activity {
                     e.printStackTrace();
                 }
             }
-
-            @Override
-            public void onFailure(Throwable e, JSONObject errorResponse) {
-                LogManager.print("This on failure 1 : " + errorResponse.toString());
-            }
-
-            @Override
-            public void onFailure(Throwable e, JSONArray errorResponse) {
-                LogManager.print("This on failure 2 : " + errorResponse.toString());
-            }
-
             @Override
             public void onFailure(int statusCode, org.apache.http.Header[] headers,
                     java.lang.String responseBody, java.lang.Throwable e) {
-                LogManager.print("This on failure 3 : " + responseBody);
-                if (statusCode == 404) {
-                    LogManager.print("400");
-                } else if (statusCode == 500) {
-                    LogManager.print("500");
-                } else if (statusCode == 0) {
-                    LogManager.print("0");
-                } else {
-                    LogManager.print("fail");
-                }
+                status.setVisibility(View.VISIBLE);
             }
 
-            @Override
-            public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                // TODO Auto-generated method stub
-                super.onFailure(arg0, arg1, arg2, arg3);
-                LogManager.print("This on failure 3 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e,
-                    JSONArray errorResponse) {
-                LogManager.print("This on failure 4 : ");
-            };
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e,
-                    JSONObject errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, headers, e, errorResponse);
-                LogManager.print("This on failure 5 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Throwable e, JSONArray errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, e, errorResponse);
-                LogManager.print("This on failure 6 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Throwable e, JSONObject errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, e, errorResponse);
-                LogManager.print("This on failure 7 : ");
-            }
-
-            @Override
-            public void onFailure(String responseBody, Throwable error) {
-                // TODO Auto-generated method stub
-                super.onFailure(responseBody, error);
-                LogManager.print("This on failure 8 : ");
-            }
         });
     }
 }

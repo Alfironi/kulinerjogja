@@ -9,7 +9,6 @@ import com.amikom.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
-import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,6 +23,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,12 +34,15 @@ public class KategoriFragment extends Fragment {
     private KategoriAdapter mAdapter;
     private List<KategoriModel> mItems;
     private Context mContext;
+    private ProgressBar progressBar;
+    private TextView status;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
 
         View rootviView = inflater.inflate(R.layout.category_layout, container, false);
+        mContext = getActivity();
         initView(rootviView);
         Bundle bundle = this.getArguments();
         String kategori = bundle.getString("kategori");
@@ -61,12 +65,13 @@ public class KategoriFragment extends Fragment {
             public void onStart() {
                 // TODO Auto-generated method stub
                 LogManager.print("Rating onStart");
-
+                progressBar.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFinish() {
                 LogManager.print("Rating onFinish");
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
@@ -96,70 +101,9 @@ public class KategoriFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Throwable e, JSONObject errorResponse) {
-                LogManager.print("This on failure 1 : " + errorResponse.toString());
-            }
-
-            @Override
-            public void onFailure(Throwable e, JSONArray errorResponse) {
-                LogManager.print("This on failure 2 : " + errorResponse.toString());
-            }
-
-            @Override
             public void onFailure(int statusCode, org.apache.http.Header[] headers,
                     java.lang.String responseBody, java.lang.Throwable e) {
-                LogManager.print("This on failure 3 : " + responseBody);
-                if (statusCode == 404) {
-                    LogManager.print("400");
-                } else if (statusCode == 500) {
-                    LogManager.print("500");
-                } else if (statusCode == 0) {
-                    LogManager.print("0");
-                } else {
-                    LogManager.print("fail");
-                }
-            }
-
-            @Override
-            public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                // TODO Auto-generated method stub
-                super.onFailure(arg0, arg1, arg2, arg3);
-                LogManager.print("This on failure 3 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e,
-                    JSONArray errorResponse) {
-                LogManager.print("This on failure 4 : ");
-            };
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e,
-                    JSONObject errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, headers, e, errorResponse);
-                LogManager.print("This on failure 5 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Throwable e, JSONArray errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, e, errorResponse);
-                LogManager.print("This on failure 6 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Throwable e, JSONObject errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, e, errorResponse);
-                LogManager.print("This on failure 7 : ");
-            }
-
-            @Override
-            public void onFailure(String responseBody, Throwable error) {
-                // TODO Auto-generated method stub
-                super.onFailure(responseBody, error);
-                LogManager.print("This on failure 8 : ");
+                status.setVisibility(View.GONE);
             }
         });
     }
@@ -167,6 +111,11 @@ public class KategoriFragment extends Fragment {
     private void initView(View rootView) {
 
         mList = (ListView) rootView.findViewById(R.id.listview_category);
+
+        mList = (ListView) rootView.findViewById(R.id.listview_category);
+        progressBar = (ProgressBar) rootView.findViewById(R.id.progress_category);
+        status = (TextView) rootView.findViewById(R.id.status_koneksi_category);
+        status.setVisibility(View.GONE);
         mItems = new ArrayList<KategoriModel>();
         mAdapter = new KategoriAdapter(mContext, mItems);
         mList.setAdapter(mAdapter);

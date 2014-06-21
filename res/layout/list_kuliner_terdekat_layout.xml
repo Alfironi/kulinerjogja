@@ -28,7 +28,7 @@
         android:layout_marginBottom="@dimen/padding_xlarge"
         android:layout_marginTop="@dimen/padding_large"
         android:text="@string/kuliner_terdekat"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_large"
         android:textStyle="bold" />
 
@@ -40,15 +40,40 @@
         android:layout_marginRight="@dimen/padding_medium"
         android:layout_marginTop="@dimen/padding_large"
         android:text="@string/kuliner_terdekat2"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_medium" />
 
     <ListView
         android:id="@+id/list_kuliner_terdekat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/padding_medium"
-        android:layout_marginRight="@dimen/padding_medium" >
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/padding_small"
+        android:scrollbars="none" >
     </ListView>
+
+    <ProgressBar
+        android:id="@+id/progress_listterdekat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_koneksi_listterdekat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:text="Gagal load data, ada masalah dengna Koneksi !"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_size_large"
+        android:visibility="gone" />
 
 </LinearLayout>

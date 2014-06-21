@@ -24,22 +24,12 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/line_large"
-            android:layout_marginBottom="@dimen/padding_xlarge"
             android:background="@color/blue" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding_small"
-            android:text="@string/kategori_kuliner"
-            android:textColor="@color/white"
-            android:textSize="@dimen/font_size_large" />
 
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
             android:orientation="horizontal" />
 
         <FrameLayout
