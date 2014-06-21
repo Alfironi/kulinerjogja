@@ -11,22 +11,22 @@ import android.widget.TextView;
 
 public class KulinerTerdekatActivity extends Activity implements
 		OnClickListener {
-	private TextView m100;
-	private TextView m200;
-	private TextView m300;
+	private TextView m100, m200, m300;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kuliner_terdekat_layout);
-		initview();
+		initView();
 	}
 
-	private void initview() {
-		m100 = (TextView) findViewById(R.id.m100);
-		m200 = (TextView) findViewById(R.id.m200);
-		m300 = (TextView) findViewById(R.id.m300);
+	private void initView() {
+		m100 = (TextView) findViewById(R.id.dist_100);
+		m200 = (TextView) findViewById(R.id.dist_200);
+		m300 = (TextView) findViewById(R.id.dist_300);
+
 		m100.setOnClickListener(this);
 		m200.setOnClickListener(this);
 		m300.setOnClickListener(this);
@@ -34,27 +34,7 @@ public class KulinerTerdekatActivity extends Activity implements
 
 	@Override
 	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.m100:
-			click100();
-			break;
-		case R.id.m200:
-			click200();
-			break;
-		case R.id.m300:
-			click300();
-			break;
-		default:
-			break;
-		}
-	}
+		// TODO Auto-generated method stub
 
-	private void click100() {
-	}
-
-	private void click200() {
-	}
-
-	private void click300() {
 	}
 }

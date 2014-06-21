@@ -33,7 +33,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/m100"
+        android:id="@+id/dist_100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
@@ -43,7 +43,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/m200"
+        android:id="@+id/dist_200"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
@@ -53,7 +53,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/m300"
+        android:id="@+id/dist_300"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_large"
