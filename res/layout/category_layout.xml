@@ -19,15 +19,15 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/line_large"
-        android:background="@color/blue" 
-        android:layout_marginBottom="@dimen/padding_xlarge"/>
+        android:layout_marginBottom="@dimen/padding_xlarge"
+        android:background="@color/blue" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_small"
-        android:textColor="@color/white"
         android:text="@string/kategori_kuliner"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_large" />
 
     <LinearLayout
@@ -62,5 +62,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
     </ListView>
+
+    <ProgressBar
+        android:id="@+id/progress_category"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_koneksi_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:text="Gagal load data, ada masalah dengna Koneksi !"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_size_large"
+        android:visibility="gone" />
 
 </LinearLayout>

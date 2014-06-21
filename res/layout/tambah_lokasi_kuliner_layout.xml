@@ -62,7 +62,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:textColor="@color/white" />
+                    android:background="@drawable/bg_field" 
+                    android:padding="@dimen/padding_medium"/>
             </LinearLayout>
 
             <LinearLayout
@@ -85,7 +86,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:textColor="@color/white" />
+                    android:background="@drawable/bg_field" 
+                    android:padding="@dimen/padding_medium"/>
             </LinearLayout>
 
             <LinearLayout
@@ -109,7 +111,8 @@
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
                     android:lines="4"
-                    android:textColor="@color/white" />
+                    android:background="@drawable/bg_field" 
+                    android:padding="@dimen/padding_medium"/>
             </LinearLayout>
 
             <LinearLayout
@@ -132,7 +135,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:textColor="@color/white" />
+                    android:background="@drawable/bg_field" 
+                    android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -155,7 +159,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:textColor="@color/white" />
+                    android:background="@drawable/bg_field" 
+                    android:padding="@dimen/padding_medium"/>
             </LinearLayout>
 
             <LinearLayout
@@ -178,7 +183,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:textColor="@color/white" />
+                    android:background="@drawable/bg_field" 
+                    android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -209,27 +215,6 @@
                     android:layout_weight="1"
                     android:textColor="@color/white" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_small"
-                android:weightSum="3" >
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/padding_small"
-                    android:layout_weight="1"
-                    android:text="@string/longitude"
-                    android:textColor="@color/white" />
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/padding_small"
-                    android:layout_weight="2"
-                    android:textColor="@color/white" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -238,7 +223,8 @@
                 android:layout_marginRight="@dimen/padding_large"
                 android:layout_marginTop="@dimen/padding_small"
                 android:orientation="horizontal"
-                android:weightSum="2" >
+                android:weightSum="2" 
+                android:layout_marginBottom="@dimen/padding_medium">
 
                 <Button
                     android:id="@+id/btn_simpan_tambah"
@@ -246,8 +232,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/padding_small"
                     android:layout_weight="1"
+                    android:text="@string/simpan" 
+                    android:background="@drawable/bg_button"
                     android:padding="@dimen/padding_small"
-                    android:text="@string/simpan" />
+                    android:textColor="@color/white"/>
 
                 <Button
                     android:id="@+id/btn_batal_tambah"
@@ -255,8 +243,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:layout_weight="1"
-                    android:padding="@dimen/padding_small"
-                    android:text="@string/batal" />
+                    android:text="@string/batal"
+                    android:background="@drawable/bg_button"
+                    android:padding="@dimen/padding_small" 
+                    android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

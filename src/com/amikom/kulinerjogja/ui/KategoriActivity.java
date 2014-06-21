@@ -24,6 +24,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +37,8 @@ public class KategoriActivity extends Activity implements OnClickListener {
     private List<KategoriModel> mItems;
     private Context mContext;
     private String mUrl;
+    private ProgressBar progressBar;
+    private TextView status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,6 +165,8 @@ public class KategoriActivity extends Activity implements OnClickListener {
         mAsia = (Button) findViewById(R.id.asia_category);
         mLain = (Button) findViewById(R.id.lainnya_category);
         mList = (ListView) findViewById(R.id.listview_category);
+        progressBar = (ProgressBar) findViewById(R.id.progress_category);
+//        status = ()
         setListener();
         mItems = new ArrayList<KategoriModel>();
         mAdapter = new KategoriAdapter(mContext, mItems);

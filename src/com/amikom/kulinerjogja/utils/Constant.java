@@ -11,17 +11,4 @@ public class Constant {
 	public static final String SERVER_URL = "http://jogjakuliner.topmodis.com/json/";
 	public static final String GET_RATING = "rating.php";
 
-	private static double latitude, longitude;
-	private static GPSTracker gps;
-	public static double getLatitude(Context context){
-		gps = new GPSTracker(context);
-		latitude = gps.getLatitude();
-		return latitude;
-	}
-	
-	public static double getLongitude(Context context){
-		gps = new GPSTracker(context);
-		longitude = gps.getLongitude();
-		return longitude;
-	}
 }
