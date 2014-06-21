@@ -24,8 +24,8 @@
     <ScrollView
         android:id="@+id/scroll_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,10 +73,10 @@
                         <TextView
                             android:id="@+id/nama"
                             android:layout_width="0dp"
-                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:textColor="@color/white" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -87,19 +87,19 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
                             android:layout_weight="1"
-                            android:text="@string/alamat" />
+                            android:text="@string/alamat"
+                            android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/alamat"
                             android:layout_width="0dp"
-                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:textColor="@color/white" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -119,18 +119,18 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
-                    android:text="@string/deskripsi" />
+                    android:text="@string/deskripsi"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/deskripsi"
                     android:layout_width="0dp"
-                            android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -141,18 +141,18 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
-                    android:text="@string/telp" />
+                    android:text="@string/telp"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/telp"
                     android:layout_width="0dp"
-                            android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -162,19 +162,19 @@
 
                 <TextView
                     android:layout_width="0dp"
-                            android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
-                    android:text="@string/harga" />
+                    android:text="@string/harga"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/harga"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -185,18 +185,18 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
-                    android:text="@string/jam_buka" />
+                    android:text="@string/jam_buka"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/jam"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -206,37 +206,40 @@
                 android:weightSum="3" >
 
                 <Button
+                    android:id="@+id/telp_detail"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
-                            android:textColor="@color/white"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
+                    android:background="@drawable/bg_button"
                     android:gravity="center"
-                    android:text="@string/telp" 
-                    android:background="@drawable/bg_button"/>
+                    android:text="@string/telp"
+                    android:textColor="@color/white" />
 
                 <Button
+                    android:id="@+id/lokasi_detail"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
-                            android:textColor="@color/white"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
+                    android:background="@drawable/bg_button"
                     android:gravity="center"
-                    android:text="@string/ke_lokasi" 
-                    android:background="@drawable/bg_button"/>
+                    android:text="@string/ke_lokasi"
+                    android:textColor="@color/white" />
 
                 <Button
+                    android:id="@+id/bagikan_detail"
                     android:layout_width="0dp"
-                            android:textColor="@color/white"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
+                    android:background="@drawable/bg_button"
                     android:gravity="center"
                     android:text="@string/bagikan"
-                    android:background="@drawable/bg_button"/>
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <RatingBar
