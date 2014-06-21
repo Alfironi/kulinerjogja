@@ -1,12 +1,12 @@
 
-package com.amikom.kulinerjogja.terdekat;
+package com.amikom.kulinerjogja.ui;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.model.MakananModel;
-import com.amikom.kulinerjogja.pencarian.PencarianAdapter;
+import com.amikom.kulinerjogja.utils.PencarianAdapter;
 
 import android.app.Activity;
 import android.os.Bundle;

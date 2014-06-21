@@ -40,7 +40,9 @@
         android:text="@string/_100"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_large"
-        android:textStyle="bold" />
+        android:textStyle="bold" 
+        android:background="@drawable/bg_button"
+        android:padding="@dimen/padding_small"/>
 
     <TextView
         android:id="@+id/dist_200"
@@ -50,7 +52,9 @@
         android:text="@string/_200"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_large"
-        android:textStyle="bold" />
+        android:textStyle="bold" 
+        android:background="@drawable/bg_button"
+        android:padding="@dimen/padding_small"/>
 
     <TextView
         android:id="@+id/dist_300"
@@ -60,6 +64,8 @@
         android:text="@string/_300"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_large"
-        android:textStyle="bold" />
+        android:textStyle="bold" 
+        android:background="@drawable/bg_button"
+        android:padding="@dimen/padding_small"/>
 
 </LinearLayout>

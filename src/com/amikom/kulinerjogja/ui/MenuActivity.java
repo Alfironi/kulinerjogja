@@ -1,18 +1,13 @@
-package com.amikom.kulinerjogja.menu;
+package com.amikom.kulinerjogja.ui;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
 import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.kategori.KategoriActivity;
-import com.amikom.kulinerjogja.pencarian.PencarianActivity;
-import com.amikom.kulinerjogja.tambah.TambahLokasiActivity;
-import com.amikom.kulinerjogja.terdekat.KulinerTerdekatActivity;
 import com.amikom.kulinerjogja.utils.Constant;
 import com.amikom.kulinerjogja.utils.GPSTracker;
 import com.amikom.kulinerjogja.utils.LogManager;
-import com.amikom.kulinerjojga.rating.RatingActivity;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
 import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
@@ -22,6 +17,7 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.GoogleMap;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
@@ -40,6 +36,8 @@ public class MenuActivity extends Activity implements OnClickListener {
 	private Geocoder geocoder;
 	private List<Address> address;
 	private String add, city, country;
+	private double latitude, longitude;
+	private GPSTracker gps;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +45,10 @@ public class MenuActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.menu_layout);
+		gps = new GPSTracker(this);
+		latitude = gps.getLatitude();
+		longitude = gps.getLongitude();
+		
 		initView();
 		setListener();
 		new LoadLocation().execute();
@@ -105,9 +107,10 @@ public class MenuActivity extends Activity implements OnClickListener {
 		protected Void doInBackground(Void... params) {
 			geocoder = new Geocoder(MenuActivity.this, Locale.getDefault());
 			try {
-				address = geocoder.getFromLocation(
-						Constant.getLatitude(MenuActivity.this),
-						Constant.getLongitude(MenuActivity.this), 1);
+				address = geocoder.getFromLocation(latitude,longitude, 1);
+				add = address.get(0).getAddressLine(0);
+				city = address.get(0).getAddressLine(1);
+				country = address.get(0).getAddressLine(2);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -116,12 +119,8 @@ public class MenuActivity extends Activity implements OnClickListener {
 
 		@Override
 		protected void onPostExecute(Void result) {
-			if (address != null) {
-				add = address.get(0).getAddressLine(0);
-				city = address.get(0).getAddressLine(1);
-				country = address.get(0).getAddressLine(2);
-
-				textAddress.setText("Anda berada di : " + add + " " + city
+			if (add != null) {
+				textAddress.setText("Anda berada di dekat : " + add + " " + city
 						+ " " + country);
 			} else {
 				textAddress

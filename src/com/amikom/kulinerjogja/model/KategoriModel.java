@@ -1,5 +1,5 @@
 
-package com.amikom.kulinerjogja.kategori;
+package com.amikom.kulinerjogja.model;
 
 public class KategoriModel {
     private String mNama;

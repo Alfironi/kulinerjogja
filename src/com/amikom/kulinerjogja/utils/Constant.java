@@ -2,7 +2,7 @@ package com.amikom.kulinerjogja.utils;
 
 import android.content.Context;
 
-import com.amikom.kulinerjogja.menu.MenuActivity;
+import com.amikom.kulinerjogja.ui.MenuActivity;
 
 public class Constant {
 

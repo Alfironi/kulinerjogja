@@ -2,9 +2,6 @@
 package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.login.LoginActivity;
-import com.amikom.kulinerjogja.terdekat.KulinerTerdekatActivity;
-import com.amikom.kulinerjogja.menu.MenuActivity;
 import com.amikom.kulinerjogja.utils.Constant;
 
 import android.app.Activity;

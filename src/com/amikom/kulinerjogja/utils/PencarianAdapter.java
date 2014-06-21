@@ -1,4 +1,4 @@
-package com.amikom.kulinerjogja.pencarian;
+package com.amikom.kulinerjogja.utils;
 
 import java.util.ArrayList;
 import java.util.List;

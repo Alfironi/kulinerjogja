@@ -22,13 +22,16 @@
         android:background="@color/blue" />
 
     <ScrollView
+        android:id="@+id/scroll_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium" >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,7 +40,7 @@
                 android:layout_marginBottom="@dimen/padding_xlarge"
                 android:layout_marginTop="@dimen/padding_large"
                 android:text="@string/detail_kuliner"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_size_large"
                 android:textStyle="bold" />
 
@@ -64,11 +67,13 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
                             android:layout_weight="1"
-                            android:text="@string/nama" />
+                            android:text="@string/nama"
+                            android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/nama"
                             android:layout_width="0dp"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
                             android:layout_weight="1" />
@@ -82,6 +87,7 @@
 
                         <TextView
                             android:layout_width="0dp"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
                             android:layout_weight="1"
@@ -90,6 +96,7 @@
                         <TextView
                             android:id="@+id/alamat"
                             android:layout_width="0dp"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
                             android:layout_weight="1" />
@@ -112,6 +119,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
                     android:text="@string/deskripsi" />
@@ -119,6 +127,7 @@
                 <TextView
                     android:id="@+id/deskripsi"
                     android:layout_width="0dp"
+                            android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="2" />
@@ -132,6 +141,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
                     android:text="@string/telp" />
@@ -139,6 +149,7 @@
                 <TextView
                     android:id="@+id/telp"
                     android:layout_width="0dp"
+                            android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="2" />
@@ -151,6 +162,7 @@
 
                 <TextView
                     android:layout_width="0dp"
+                            android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
@@ -160,6 +172,7 @@
                     android:id="@+id/harga"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="2" />
             </LinearLayout>
@@ -172,6 +185,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
                     android:text="@string/jam_buka" />
@@ -180,6 +194,7 @@
                     android:id="@+id/jam"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                            android:textColor="@color/white"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="2" />
             </LinearLayout>
@@ -193,29 +208,35 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                            android:textColor="@color/white"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/telp" />
+                    android:text="@string/telp" 
+                    android:background="@drawable/bg_button"/>
 
                 <Button
                     android:layout_width="0dp"
+                    android:layout_height="70dp"
+                            android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/ke_lokasi" 
+                    android:background="@drawable/bg_button"/>
+
+                <Button
+                    android:layout_width="0dp"
+                            android:textColor="@color/white"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/ke_lokasi" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/padding_small"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/bagikan" />
+                    android:text="@string/bagikan"
+                    android:background="@drawable/bg_button"/>
             </LinearLayout>
 
             <RatingBar
@@ -228,5 +249,26 @@
                 android:stepSize="1.0" />
         </LinearLayout>
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_detail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_koneksi_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:text="Gagal load data, ada masalah dengna Koneksi !"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_size_large"
+        android:visibility="gone" />
 
 </LinearLayout>

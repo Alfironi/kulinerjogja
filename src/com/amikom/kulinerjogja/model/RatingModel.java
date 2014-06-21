@@ -1,5 +1,5 @@
 
-package com.amikom.kulinerjojga.rating;
+package com.amikom.kulinerjogja.model;
 
 
 
