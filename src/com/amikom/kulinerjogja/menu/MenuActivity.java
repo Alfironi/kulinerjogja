@@ -1,31 +1,17 @@
 package com.amikom.kulinerjogja.menu;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.kategori.KategoriActivity;
 import com.amikom.kulinerjogja.pencarian.PencarianActivity;
 import com.amikom.kulinerjogja.tambah.TambahLokasiActivity;
 import com.amikom.kulinerjogja.terdekat.KulinerTerdekatActivity;
 import com.amikom.kulinerjogja.utils.Constant;
-import com.amikom.kulinerjogja.utils.GPSTracker;
-import com.amikom.kulinerjogja.utils.LogManager;
 import com.amikom.kulinerjojga.rating.RatingActivity;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
-import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
-import com.google.android.gms.location.LocationClient;
-import com.google.android.gms.location.LocationListener;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.maps.GoogleMap;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
-import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +19,10 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class MenuActivity extends Activity implements OnClickListener {
 	private LinearLayout mSearch, mNear, mKategori, mRating, mTambah;
@@ -125,7 +115,7 @@ public class MenuActivity extends Activity implements OnClickListener {
 						+ " " + country);
 			} else {
 				textAddress
-						.setText("Posisi Anda gagal diload. Ada masalah dengan koneksi GPS.");
+						.setText("Posisi Anda gagal diload. Ada masalah dengan koneksi internet.");
 			}
 			super.onPostExecute(result);
 		}
