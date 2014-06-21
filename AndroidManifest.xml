@@ -48,6 +48,8 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBsM6I7IxQfIEo0ldgLI3P35buw4f12Bg8" />
+
+        <activity android:name="com.amikom.kulinerjogja.ui.TabKategoriActivity" />
     </application>
 
 </manifest>
