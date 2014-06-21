@@ -48,6 +48,7 @@ public class ListKulinerTerdekatActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list_kuliner_terdekat_layout);
 		jarak = getIntent().getStringExtra("distance");
+//		jarak = "2000";
 		mContext = this;
 		gps = new GPSTracker(this);
 		latitude = gps.getLatitude();
@@ -158,6 +159,8 @@ public class ListKulinerTerdekatActivity extends Activity {
 
 		locationB.setLatitude(Double.parseDouble(latB));
 		locationB.setLongitude(Double.parseDouble(lngB));
+//		locationB.setLatitude(-6.2192001);
+//		locationB.setLongitude(106.8201898);
 
 		double distance = Double.valueOf(jarak);
 		double dist = locationA.distanceTo(locationB);

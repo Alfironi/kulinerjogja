@@ -61,12 +61,13 @@ public class KategoriActivity extends Activity implements OnClickListener {
             public void onStart() {
                 // TODO Auto-generated method stub
                 LogManager.print("Rating onStart");
-
+                progressBar.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFinish() {
                 LogManager.print("Rating onFinish");
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
@@ -90,72 +91,10 @@ public class KategoriActivity extends Activity implements OnClickListener {
                     e.printStackTrace();
                 }
             }
-
-            @Override
-            public void onFailure(Throwable e, JSONObject errorResponse) {
-                LogManager.print("This on failure 1 : " + errorResponse.toString());
-            }
-
-            @Override
-            public void onFailure(Throwable e, JSONArray errorResponse) {
-                LogManager.print("This on failure 2 : " + errorResponse.toString());
-            }
-
             @Override
             public void onFailure(int statusCode, org.apache.http.Header[] headers,
                     java.lang.String responseBody, java.lang.Throwable e) {
-                LogManager.print("This on failure 3 : " + responseBody);
-                if (statusCode == 404) {
-                    LogManager.print("400");
-                } else if (statusCode == 500) {
-                    LogManager.print("500");
-                } else if (statusCode == 0) {
-                    LogManager.print("0");
-                } else {
-                    LogManager.print("fail");
-                }
-            }
-
-            @Override
-            public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                // TODO Auto-generated method stub
-                super.onFailure(arg0, arg1, arg2, arg3);
-                LogManager.print("This on failure 3 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e,
-                    JSONArray errorResponse) {
-                LogManager.print("This on failure 4 : ");
-            };
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e,
-                    JSONObject errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, headers, e, errorResponse);
-                LogManager.print("This on failure 5 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Throwable e, JSONArray errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, e, errorResponse);
-                LogManager.print("This on failure 6 : ");
-            }
-
-            @Override
-            public void onFailure(int statusCode, Throwable e, JSONObject errorResponse) {
-                // TODO Auto-generated method stub
-                super.onFailure(statusCode, e, errorResponse);
-                LogManager.print("This on failure 7 : ");
-            }
-
-            @Override
-            public void onFailure(String responseBody, Throwable error) {
-                // TODO Auto-generated method stub
-                super.onFailure(responseBody, error);
-                LogManager.print("This on failure 8 : ");
+                status.setVisibility(View.GONE);
             }
         });
     }
@@ -166,7 +105,8 @@ public class KategoriActivity extends Activity implements OnClickListener {
         mLain = (Button) findViewById(R.id.lainnya_category);
         mList = (ListView) findViewById(R.id.listview_category);
         progressBar = (ProgressBar) findViewById(R.id.progress_category);
-//        status = ()
+        status = (TextView) findViewById(R.id.status_koneksi_category);
+        status.setVisibility(View.GONE);
         setListener();
         mItems = new ArrayList<KategoriModel>();
         mAdapter = new KategoriAdapter(mContext, mItems);

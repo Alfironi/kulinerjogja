@@ -33,34 +33,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_small"
         android:weightSum="3" >
 
         <Button
             android:id="@+id/nusantara_category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/nusantara" />
+            android:layout_weight="1.1"
+            android:background="@drawable/bg_button"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/nusantara"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".05" />
 
         <Button
             android:id="@+id/asia_category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/asia" />
+            android:layout_weight=".9"
+            android:background="@drawable/bg_button"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/asia"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".05" />
 
         <Button
             android:id="@+id/lainnya_category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/lainnya" />
+            android:layout_weight=".9"
+            android:background="@drawable/bg_button"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/lainnya"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/listview_category"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/padding_small"
+        android:scrollbars="none" >
     </ListView>
 
     <ProgressBar

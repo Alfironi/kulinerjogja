@@ -108,6 +108,7 @@ public class MenuActivity extends Activity implements OnClickListener {
 			geocoder = new Geocoder(MenuActivity.this, Locale.getDefault());
 			try {
 				address = geocoder.getFromLocation(latitude,longitude, 1);
+//				address = geocoder.getFromLocation(-6.2192001,106.8201898, 1);
 				add = address.get(0).getAddressLine(0);
 				city = address.get(0).getAddressLine(1);
 				country = address.get(0).getAddressLine(2);
