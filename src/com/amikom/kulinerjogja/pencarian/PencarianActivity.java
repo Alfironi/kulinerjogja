@@ -9,11 +9,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.amikom.kulinerjogja.R;
+import com.amikom.kulinerjogja.kategori.KategoriModel;
 import com.amikom.kulinerjogja.model.MakananModel;
+import com.amikom.kulinerjogja.terdekat.DetailKulinerActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -74,11 +77,17 @@ public class PencarianActivity extends Activity{
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				String idmakanan = ((MakananModel)adapter.getItem(position)).getIdMakanan();
+				String idresto = ((MakananModel)adapter.getItem(position)).getIdRestoran();
+				goToDetail(idresto);
 			}
 		});
 	}
-
+	private void goToDetail(String id) {
+		Log.d("Id", "Id >> "+id);
+        Intent intent = new Intent(this, DetailKulinerActivity.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
+    }
 	private void getDataMakanan() {
 		AsyncHttpClient client = new AsyncHttpClient();
 		String url = "http://jogjakuliner.topmodis.com/makanan/data/format/json/";

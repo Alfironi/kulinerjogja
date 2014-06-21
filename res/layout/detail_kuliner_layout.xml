@@ -67,6 +67,7 @@
                             android:text="@string/nama" />
 
                         <TextView
+                            android:id="@+id/nama"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
@@ -87,6 +88,7 @@
                             android:text="@string/alamat" />
 
                         <TextView
+                            android:id="@+id/alamat"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/padding_medium"
@@ -115,6 +117,7 @@
                     android:text="@string/deskripsi" />
 
                 <TextView
+                    android:id="@+id/deskripsi"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
@@ -134,6 +137,7 @@
                     android:text="@string/telp" />
 
                 <TextView
+                    android:id="@+id/telp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
@@ -153,6 +157,7 @@
                     android:text="@string/harga" />
 
                 <TextView
+                    android:id="@+id/harga"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
@@ -172,6 +177,7 @@
                     android:text="@string/jam_buka" />
 
                 <TextView
+                    android:id="@+id/jam"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_medium"
