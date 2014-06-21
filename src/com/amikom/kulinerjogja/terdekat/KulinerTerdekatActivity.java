@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class KulinerTerdekatActivity extends Activity implements OnClickListener {
     private TextView m100, m200, m300;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -49,13 +49,13 @@ public class KulinerTerdekatActivity extends Activity implements OnClickListener
             default:
                 break;
         }
-        
-      
+
     }
-    private void goToListKuliner(String jarak){
+
+    private void goToListKuliner(String jarak) {
         Intent intent = new Intent(KulinerTerdekatActivity.this, ListKulinerTerdekatActivity.class);
         intent.putExtra("distance", jarak);
         startActivity(intent);
-     }
-   
+    }
+
 }

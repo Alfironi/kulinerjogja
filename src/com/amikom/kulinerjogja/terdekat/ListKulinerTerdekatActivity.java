@@ -4,6 +4,7 @@ package com.amikom.kulinerjogja.terdekat;
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.kategori.KategoriAdapter;
 import com.amikom.kulinerjogja.kategori.KategoriModel;
+import com.amikom.kulinerjogja.utils.Constant;
 import com.amikom.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -33,14 +34,17 @@ public class ListKulinerTerdekatActivity extends Activity {
     private KategoriAdapter mAdapter;
     private List<KategoriModel> mItems;
     private Context mContext;
+    private String jarak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_kuliner_terdekat_layout);
+        jarak = getIntent().getStringExtra("jarak");
+        mContext = this;
         initView();
+        loadData();
     }
 
     private void initView() {
@@ -66,7 +70,7 @@ public class ListKulinerTerdekatActivity extends Activity {
         startActivity(intent);
     }
 
-    private void loadData(double distance) {
+    private void loadData() {
         final String url = "http://jogjakuliner.topmodis.com/restoran/data/format/json";
         AsyncHttpClient client = new AsyncHttpClient();
 
@@ -97,13 +101,14 @@ public class ListKulinerTerdekatActivity extends Activity {
                         String id = obj.getString("id_restoran");
                         mLat = obj.getString("lat");
                         mLong = obj.getString("Longitude");
-                        
-                        
-                        KategoriModel model = new KategoriModel(nama, id);
-                        mItems.add(model);
-                        mAdapter.updateProduct(mItems);
-                        mAdapter.notifyDataSetChanged();
-                        mAdapter.notifyDataSetInvalidated();
+                        if (getDistance(mLat, mLong, jarak)) {
+                            KategoriModel model = new KategoriModel(nama, id);
+                            mItems.add(model);
+                            mAdapter.updateProduct(mItems);
+                            mAdapter.notifyDataSetChanged();
+                            mAdapter.notifyDataSetInvalidated();
+                        }
+
                     }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
@@ -180,17 +185,35 @@ public class ListKulinerTerdekatActivity extends Activity {
         });
     }
 
-    private double getDistance(String latA, String lngA, String latB, String lngB) {
+    private boolean getDistance(String latB, String lngB, String jarak) {
+        boolean isStatus = true;
         Location locationA = new Location("point A");
 
-        locationA.setLatitude(Double.parseDouble(latA));
-        locationA.setLongitude(Double.parseDouble(lngA));
+        locationA.setLatitude(Constant.getLatitude(mContext));
+        locationA.setLongitude(Constant.getLongitude(mContext));
 
         Location locationB = new Location("point B");
 
         locationB.setLatitude(Double.parseDouble(latB));
         locationB.setLongitude(Double.parseDouble(lngB));
 
-        return locationA.distanceTo(locationB);
+        double distance = Double.valueOf(jarak);
+        double dist = locationA.distanceTo(locationB);
+
+        LogManager.print("lat a = " + Constant.getLatitude(mContext));
+        LogManager.print("long a = " + Constant.getLongitude(mContext));
+
+        LogManager.print("lat b = " + latB);
+        LogManager.print("long b = " + lngB);
+
+        LogManager.print("jarak = " + dist);
+        LogManager.print("jarak patokan =" + distance);
+        if (dist <= distance) {
+            isStatus = true;
+        } else {
+            isStatus = false;
+        }
+        return isStatus;
     }
+
 }

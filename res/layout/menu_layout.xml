@@ -162,7 +162,9 @@
                 android:id="@+id/near_distance_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:gravity="bottom"
                 android:textSize="@dimen/font_size_medium" />
         </LinearLayout>
     </ScrollView>
