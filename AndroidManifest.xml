@@ -37,16 +37,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.amikom.kulinerjogja.ui.DetailKulinerActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.KategoriActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.KulinerTerdekatActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.ListKulinerTerdekatActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.LoginActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.MenuActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.PencarianActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.RatingActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.RegisterActivity"/>
-        <activity android:name="com.amikom.kulinerjogja.ui.TambahLokasiActivity"/>
+        <activity android:name="com.amikom.kulinerjogja.ui.DetailKulinerActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.KulinerTerdekatActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.ListKulinerTerdekatActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.LoginActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.MenuActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.PencarianActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.RatingActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.RegisterActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.TambahLokasiActivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.TabKategoriActivity" />
     </application>
 
 </manifest>

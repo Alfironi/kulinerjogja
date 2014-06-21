@@ -72,7 +72,7 @@ public class MenuActivity extends Activity implements OnClickListener {
                         KulinerTerdekatActivity.class));
                 break;
             case R.id.category_menu_layout:
-                startActivity(new Intent(MenuActivity.this, KategoriActivity.class));
+                startActivity(new Intent(MenuActivity.this, TabKategoriActivity.class));
                 break;
             case R.id.rating_menu_layout:
                 startActivity(new Intent(MenuActivity.this, RatingActivity.class));
