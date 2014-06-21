@@ -57,6 +57,7 @@
                     android:textColor="@color/white" />
 
                 <EditText
+                    android:id="@+id/nama_tambah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
@@ -79,6 +80,7 @@
                     android:textColor="@color/white" />
 
                 <EditText
+                    android:id="@+id/alamat_tambah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
@@ -101,6 +103,7 @@
                     android:textColor="@color/white" />
 
                 <EditText
+                    android:id="@+id/desc_tambah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
@@ -124,6 +127,7 @@
                     android:textColor="@color/white" />
 
                 <EditText
+                    android:id="@+id/telf_tambah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
@@ -146,6 +150,7 @@
                     android:textColor="@color/white" />
 
                 <EditText
+                    android:id="@+id/harga_tambah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
@@ -168,6 +173,7 @@
                     android:textColor="@color/white" />
 
                 <EditText
+                    android:id="@+id/jam_tambah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
@@ -186,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
-                    android:text="@string/tambah_lokasi"
+                    android:text="@string/pilih_foto"
                     android:textColor="@color/white" />
 
                 <ImageView
@@ -201,7 +207,27 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
-                    android:text="longitude"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_small"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:text="@string/longitude"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_small"
+                    android:layout_weight="2"
                     android:textColor="@color/white" />
             </LinearLayout>
 

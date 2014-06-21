@@ -10,6 +10,8 @@
     <string name="telp">Telp</string>
     <string name="harga">Harga</string>
     <string name="jam_buka">Jam Buka</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
     <string name="pilih_foto">Pilih Foto</string>
     <string name="titik_dua">:</string>
     <string name="simpan">Simpan</string>
