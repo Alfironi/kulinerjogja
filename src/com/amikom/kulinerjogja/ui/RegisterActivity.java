@@ -51,6 +51,7 @@ public class RegisterActivity extends Activity implements OnClickListener{
 		}
 	}
 	private void insertUser() {
+	    
 		UserModel model = new UserModel();
 		model.setUser(mUser.getText().toString());
 		model.setPassword(mPass.getText().toString());

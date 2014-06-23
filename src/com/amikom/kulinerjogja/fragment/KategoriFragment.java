@@ -9,6 +9,7 @@ import com.amikom.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -75,7 +76,7 @@ public class KategoriFragment extends Fragment {
             }
 
             @Override
-            public void onSuccess(JSONObject response) {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 LogManager.print("Rating onSuccess : " + response.toString());
                 if (mItems.size() > 0) {
                     mItems.clear();
@@ -101,9 +102,9 @@ public class KategoriFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(int statusCode, org.apache.http.Header[] headers,
-                    java.lang.String responseBody, java.lang.Throwable e) {
-                status.setVisibility(View.GONE);
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable,
+                    JSONObject errorResponse) {
+                status.setVisibility(View.VISIBLE);
             }
         });
     }

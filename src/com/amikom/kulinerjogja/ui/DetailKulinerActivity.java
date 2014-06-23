@@ -6,6 +6,7 @@ import com.amikom.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetailKulinerActivity extends Activity implements OnClickListener {
     private String mNama, mAlamat, mDeskripsi, mTelp, mHarga, mJam;
@@ -87,7 +89,7 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
             }
 
             @Override
-            public void onSuccess(JSONObject response) {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 scroll.setVisibility(View.VISIBLE);
                 LogManager.print("Rating onSuccess : " + response.toString());
                 try {
@@ -115,11 +117,13 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
             }
 
             @Override
-            public void onFailure(int statusCode,
-                    org.apache.http.Header[] headers,
-                    java.lang.String responseBody, java.lang.Throwable e) {
-                status.setVisibility(View.VISIBLE);
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable,
+                    JSONObject errorResponse) {
+                Toast.makeText(getApplicationContext(),
+                        "Proses gagal ada masalah dengan koneksi internet", Toast.LENGTH_SHORT)
+                        .show();
             }
+
         });
     }
 
