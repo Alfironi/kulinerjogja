@@ -1,8 +1,5 @@
 package com.amikom.kulinerjogja.ui;
 
-import java.util.List;
-import java.util.logging.LogManager;
-
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.model.UserModel;
 import com.amikom.kulinerjogja.utils.Constant;
@@ -13,12 +10,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class LoginActivity extends Activity implements OnClickListener{
 
@@ -76,6 +75,8 @@ public class LoginActivity extends Activity implements OnClickListener{
 				mEditor.commit();
 				startActivity(new Intent(this, MenuActivity.class));
 				finish();
+			} else {
+			    Toast.makeText(this, "Username dan password tidak cocok", Toast.LENGTH_SHORT).show();
 			}
 		}
 	}

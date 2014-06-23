@@ -74,7 +74,7 @@ public class RatingActivity extends Activity {
             }
 
             @Override
-            public void onSuccess(JSONObject response) {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 LogManager.print("Rating onSuccess : " + response.toString());
                 try {
                     JSONArray mJsonArray = response.getJSONArray("data-list");
@@ -95,10 +95,13 @@ public class RatingActivity extends Activity {
                     e.printStackTrace();
                 }
             }
+
             @Override
-            public void onFailure(int statusCode, org.apache.http.Header[] headers,
-                    java.lang.String responseBody, java.lang.Throwable e) {
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable,
+                    JSONObject errorResponse) {
+                LogManager.print("onfailure");
                 status.setVisibility(View.VISIBLE);
+                status.setText("Gagal load data, ada masalah dengan Koneksi !");
             }
 
         });

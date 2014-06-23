@@ -20,8 +20,16 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/line_large"
         android:background="@color/blue" />
-
+   
+    <ProgressBar 
+        android:id="@+id/progress_tambah"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
     <ScrollView
+        android:id="@+id/scrol_tambah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none" >
