@@ -88,7 +88,8 @@
                     android:background="@drawable/bg_field"
                     android:padding="@dimen/padding_medium"
                     android:layout_weight=".6"
-                    android:textSize="@dimen/font_size_medium" />
+                    android:textSize="@dimen/font_size_medium" 
+                    android:password="true"/>
             </LinearLayout>
 
             <LinearLayout
@@ -159,6 +160,7 @@
                     android:textSize="@dimen/font_size_medium" />
 
                 <RadioGroup
+                    android:id="@+id/jk_register"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/padding_medium"

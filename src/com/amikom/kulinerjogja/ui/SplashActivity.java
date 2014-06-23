@@ -26,15 +26,15 @@ public class SplashActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-//                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-//                finish();
-                if (!mSharedPreferences.getBoolean(Constant.IS_LOGIN, false)) {
-        			startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-        			finish();
-        		}else{
-        			startActivity(new Intent(SplashActivity.this, MenuActivity.class));
-        			finish();
-        		}
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                finish();
+//                if (!mSharedPreferences.getBoolean(Constant.IS_LOGIN, false)) {
+//        			startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+//        			finish();
+//        		}else{
+//        			startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+//        			finish();
+//        		}
             }
         }, SPLASH_TIME_OUT);
     }
