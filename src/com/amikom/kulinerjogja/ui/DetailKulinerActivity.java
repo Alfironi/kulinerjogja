@@ -1,6 +1,8 @@
 
 package com.amikom.kulinerjogja.ui;
 
+import java.io.ObjectOutputStream.PutField;
+
 import com.amikom.kulinerjogja.R;
 import com.amikom.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
@@ -26,6 +28,7 @@ import android.widget.Toast;
 
 public class DetailKulinerActivity extends Activity implements OnClickListener {
     private String mNama, mAlamat, mDeskripsi, mTelp, mHarga, mJam;
+    private double latitude, longitude;
     TextView txtNama, txtAlamat, txtDeskripsi, txtTelp, txtHarga, txtJam,
             status;
     ScrollView scroll;
@@ -70,7 +73,7 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
                 + id + "/format/json";
         AsyncHttpClient client = new AsyncHttpClient();
 
-        LogManager.print("call API " + url);
+        LogManager.print("call API restoran" + url);
 
         client.get(url, new JsonHttpResponseHandler() {
 
@@ -102,6 +105,8 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
                         mTelp = obj.getString("telp");
                         mHarga = obj.getString("harga");
                         mJam = obj.getString("jambuka");
+                        latitude = obj.getDouble("lat");
+                        longitude = obj.getDouble("longitude");
 
                         txtNama.setText(": " + mNama);
                         txtAlamat.setText(": " + mAlamat);
@@ -151,8 +156,11 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
     }
 
     private void lokasi() {
-        // TODO Auto-generated method stub
-
+    	LogManager.print("latlong sbelum : "+latitude+" | "+longitude);
+        Intent intent = new Intent(this, MapAcitivity.class);
+        intent.putExtra("lat", String.valueOf(latitude));
+    	intent.putExtra("long", String.valueOf(longitude));
+        startActivity(intent);
     }
 
     private void telf() {
