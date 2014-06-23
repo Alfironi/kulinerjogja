@@ -41,6 +41,7 @@
         <activity android:name="com.amikom.kulinerjogja.ui.RegisterActivity" />
         <activity android:name="com.amikom.kulinerjogja.ui.TambahLokasiActivity" />
         <activity android:name="com.amikom.kulinerjogja.ui.MapAcitivity" />
+        <activity android:name="com.amikom.kulinerjogja.ui.MainActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

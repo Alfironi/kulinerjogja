@@ -49,7 +49,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="@dimen/padding_medium"
         android:layout_marginRight="@dimen/padding_medium"
-        android:text="Gagal load data, ada masalah dengan Koneksi !"
+        android:text="Gagal load data, ada masalah dengna Koneksi !"
         android:textColor="@color/red"
         android:textSize="@dimen/font_size_large"
         android:visibility="gone" />
