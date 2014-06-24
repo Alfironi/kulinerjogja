@@ -23,9 +23,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Paint;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.Uri;
@@ -36,7 +35,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -50,8 +48,8 @@ import java.util.List;
 
 public class TambahLokasiActivity extends Activity implements OnClickListener {
     private Button mBtnSimpan, mBtnBatal;
-    private TextView mNama, mAlamat, mDeskripsi, mTelp, mHarga, mJam, mAmbilFoto;
-    private ImageView image;
+    private TextView mNama, mAlamat, mDeskripsi, mTelp, mHarga, mJam;
+//    private ImageView image;
     private String mLat, mLong;
     private ProgressBar mProgress;
     private ScrollView mScroll;
@@ -78,10 +76,10 @@ public class TambahLokasiActivity extends Activity implements OnClickListener {
         mTelp = (TextView) findViewById(R.id.telf_tambah);
         mHarga = (TextView) findViewById(R.id.harga_tambah);
         mJam = (TextView) findViewById(R.id.jam_tambah);
-        mAmbilFoto = (TextView) findViewById(R.id.ambil_foto);
-        image = (ImageView) findViewById(R.id.image_tambah);
-        mAmbilFoto.setPaintFlags(mAmbilFoto.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        mAmbilFoto.setOnClickListener(this);
+//        mAmbilFoto = (TextView) findViewById(R.id.ambil_foto);
+//        image = (ImageView) findViewById(R.id.image_tambah);
+//        mAmbilFoto.setPaintFlags(mAmbilFoto.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+//        mAmbilFoto.setOnClickListener(this);
         mBtnSimpan.setOnClickListener(this);
         mBtnBatal.setOnClickListener(this);
 
@@ -99,9 +97,9 @@ public class TambahLokasiActivity extends Activity implements OnClickListener {
             case R.id.btn_batal_tambah:
                 batal();
                 break;
-            case R.id.ambil_foto:
-                selectImageFromGallery();
-                break;
+//            case R.id.ambil_foto:
+//                selectImageFromGallery();
+//                break;
             default:
                 break;
         }
@@ -188,7 +186,7 @@ public class TambahLokasiActivity extends Activity implements OnClickListener {
         mTelp.setText("");
         mJam.setText("");
         mHarga.setText("");
-        image.setImageBitmap(null);
+//        image.setImageBitmap(null);
     }
 
     private void generateLatLong(String strAddress) {
@@ -316,7 +314,7 @@ public class TambahLokasiActivity extends Activity implements OnClickListener {
         o2.inSampleSize = scale;
         bitmap = BitmapFactory.decodeFile(filePath, o2);
 
-        image.setImageBitmap(bitmap);
+//        image.setImageBitmap(bitmap);
     }
 
     /**

@@ -5,56 +5,70 @@
     android:background="@drawable/background_app"
     android:scrollbars="none" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="@dimen/padding_medium" >
+        android:orientation="vertical" >
 
-        <ImageView
-            android:layout_width="@dimen/size_logo_splash"
-            android:layout_height="@dimen/size_logo_splash"
-            android:src="@drawable/logo" 
-            android:layout_gravity="center_horizontal"/>
+        <ProgressBar
+            android:id="@+id/progress_login"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
 
-        <EditText
-            android:id="@+id/email_login"
+        <LinearLayout
+            android:id="@+id/lin_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_medium"
-            android:background="@drawable/bg_field"
-            android:hint="User"
-            android:padding="@dimen/padding_medium" />
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium" >
 
-        <EditText
-            android:id="@+id/pass_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_medium"
-            android:background="@drawable/bg_field"
-            android:hint="Password"
-            android:padding="@dimen/padding_medium"
-            android:password="true" />
+            <ImageView
+                android:layout_width="@dimen/size_logo_splash"
+                android:layout_height="@dimen/size_logo_splash"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
 
-        <Button
-            android:id="@+id/login_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_medium"
-            android:background="@drawable/bg_button"
-            android:padding="@dimen/padding_medium"
-            android:text="Login"
-            android:textColor="@color/white" />
+            <EditText
+                android:id="@+id/email_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@drawable/bg_field"
+                android:hint="User"
+                android:padding="@dimen/padding_medium" />
 
-        <Button
-            android:id="@+id/register_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_button"
-            android:padding="@dimen/padding_medium"
-            android:text="Register"
-            android:textColor="@color/white" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/pass_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@drawable/bg_field"
+                android:hint="Password"
+                android:padding="@dimen/padding_medium"
+                android:password="true" />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:background="@drawable/bg_button"
+                android:padding="@dimen/padding_medium"
+                android:text="Login"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button"
+                android:padding="@dimen/padding_medium"
+                android:text="Register"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

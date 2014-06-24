@@ -50,65 +50,44 @@
                 android:orientation="horizontal"
                 android:weightSum="3" >
 
-                <LinearLayout
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:orientation="vertical" >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/padding_medium"
-                            android:layout_weight="1"
-                            android:text="@string/nama"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            android:id="@+id/nama"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/padding_medium"
-                            android:layout_weight="1"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/padding_medium"
-                            android:layout_weight="1"
-                            android:text="@string/alamat"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            android:id="@+id/alamat"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/padding_medium"
-                            android:layout_weight="1"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
                     android:layout_margin="@dimen/padding_medium"
                     android:layout_weight="1"
-                    android:background="@color/black" />
+                    android:text="@string/nama"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_medium"
+                    android:layout_weight="2"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_medium"
+                    android:layout_weight="1"
+                    android:text="@string/alamat"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_medium"
+                    android:layout_weight="2"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -208,7 +187,7 @@
                 <Button
                     android:id="@+id/telp_detail"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
@@ -220,7 +199,7 @@
                 <Button
                     android:id="@+id/lokasi_detail"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
@@ -232,7 +211,7 @@
                 <Button
                     android:id="@+id/bagikan_detail"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
