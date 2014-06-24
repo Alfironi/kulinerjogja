@@ -120,6 +120,14 @@ public class TambahLokasiActivity extends Activity implements OnClickListener {
                 }
 
                 @Override
+                public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
+                    LogManager.print("onsucces1");
+                    Toast.makeText(getApplicationContext(), "Data berhasil ditambahkan",
+                            Toast.LENGTH_LONG).show();
+                    clearForm();
+                }
+
+                @Override
                 public void onFinish() {
                     LogManager.print("onfinish");
                     mProgress.setVisibility(View.GONE);
@@ -127,24 +135,14 @@ public class TambahLokasiActivity extends Activity implements OnClickListener {
                 }
 
                 @Override
-                public void onSuccess(int statusCode, Header[] headers, byte[] response) {
-                    LogManager.print("onsucces " + response);
-                    Toast.makeText(getApplicationContext(), "Data berhasil ditambahkan",
-                            Toast.LENGTH_LONG).show();
-                    clearForm();
-                }
-
-                @Override
-                public void onFailure(int statusCode, Header[] headers, byte[] errorResponse,
-                        Throwable e) {
+                public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
                     Toast.makeText(TambahLokasiActivity.this,
                             "Gagal Menyimpan, masalah koneksi", Toast.LENGTH_LONG)
                             .show();
                 }
-
             });
-        }
 
+        }
     }
 
     private void clearForm() {
