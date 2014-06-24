@@ -210,6 +210,7 @@
                     android:textColor="@color/white" />
 
                 <ImageView
+                    android:id="@+id/image_tambah"
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:layout_margin="@dimen/padding_small"
@@ -217,11 +218,13 @@
                     android:background="@color/black" />
 
                 <TextView
+                    android:id="@+id/ambil_foto"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="1"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white" 
+                    android:text="@string/ambil_foto"/>
             </LinearLayout>
 
             <LinearLayout
