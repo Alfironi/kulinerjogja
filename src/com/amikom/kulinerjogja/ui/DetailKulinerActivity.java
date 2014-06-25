@@ -156,10 +156,7 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
 		sharingIntent.setType("text/html");
 		sharingIntent.putExtra(
 				android.content.Intent.EXTRA_TEXT,
-				Html.fromHtml("<p>Nama : " + mNama + ", Alamat : " + mAlamat
-						+ ", Deskripsi : " + mDeskripsi + ", Telepon : "
-						+ mTelp + ", Harga : " + mHarga + ", Jam : " + mJam
-						+ "</p>"));
+				Html.fromHtml("<p>saya sedang berada di "+mNama+"</p>"));
 		startActivity(Intent.createChooser(sharingIntent, "Share using"));
 	}
 
