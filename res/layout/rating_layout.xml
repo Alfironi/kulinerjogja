@@ -28,7 +28,7 @@
         android:layout_marginLeft="@dimen/padding_small"
         android:layout_marginRight="@dimen/padding_small"
         android:cacheColorHint="@android:color/transparent"
-        android:divider="@android:color/transparent"
+        android:divider="@color/white"
         android:dividerHeight="@dimen/padding_small"
         android:scrollbars="none" >
     </ListView>

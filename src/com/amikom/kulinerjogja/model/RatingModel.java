@@ -7,16 +7,27 @@ public class RatingModel {
     private String mNomor;
     private String mNama;
     private int mRating;
+    private String mRest;
 
-    public RatingModel(String mNomor, String mNama, int mRating) {
+    
+   
+    
+    public String getmRest() {
+        return mRest;
+    }
+
+    public void setmRest(String mRest) {
+        this.mRest = mRest;
+    }
+
+    public RatingModel(String mNomor, String mNama, int mRating, String mRest) {
         super();
         this.mNomor = mNomor;
         this.mNama = mNama;
         this.mRating = mRating;
+        this.mRest = mRest;
     }
 
-   
-    
     public String getmNomor() {
         return mNomor;
     }
