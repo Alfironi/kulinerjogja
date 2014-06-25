@@ -241,4 +241,5 @@ public class DetailKulinerActivity extends Activity implements OnClickListener {
         callIntent.setData(Uri.parse(phone));
         startActivity(callIntent);
     }
+
 }
