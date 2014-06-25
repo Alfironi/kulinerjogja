@@ -125,12 +125,12 @@ public class ListKulinerTerdekatActivity extends Activity {
                             mAdapter.updateProduct(mItems);
                             mAdapter.notifyDataSetChanged();
                             mAdapter.notifyDataSetInvalidated();
-                        }
-                        if (mItems.size() == 0) {
-                            status.setVisibility(View.VISIBLE);
-                            status.setText("Tidak ada Kuliner terdekat dalam jarak " + jarak + " m");
-                        }
+                        }                      
 
+                    }
+                    if (mItems.size() == 0) {
+                        status.setVisibility(View.VISIBLE);
+                        status.setText("Tidak ada Kuliner terdekat dalam jarak " + jarak + " m");
                     }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block

@@ -20,14 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/line_large"
         android:background="@color/blue" />
-   
-    <ProgressBar 
+
+    <ProgressBar
         android:id="@+id/progress_tambah"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:visibility="gone"
         android:layout_gravity="center"
-        />
+        android:visibility="gone" />
+
     <ScrollView
         android:id="@+id/scrol_tambah"
         android:layout_width="match_parent"
@@ -70,8 +70,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:background="@drawable/bg_field" 
-                    android:padding="@dimen/padding_medium"/>
+                    android:background="@drawable/bg_field"
+                    android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -94,8 +94,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:background="@drawable/bg_field" 
-                    android:padding="@dimen/padding_medium"/>
+                    android:background="@drawable/bg_field"
+                    android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -118,9 +118,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
+                    android:background="@drawable/bg_field"
                     android:lines="4"
-                    android:background="@drawable/bg_field" 
-                    android:padding="@dimen/padding_medium"/>
+                    android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -143,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:background="@drawable/bg_field" 
+                    android:background="@drawable/bg_field"
                     android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
@@ -167,8 +167,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:background="@drawable/bg_field" 
-                    android:padding="@dimen/padding_medium"/>
+                    android:background="@drawable/bg_field"
+                    android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
@@ -191,51 +191,19 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_small"
                     android:layout_weight="2"
-                    android:background="@drawable/bg_field" 
+                    android:background="@drawable/bg_field"
                     android:padding="@dimen/padding_medium" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_small"
-                android:weightSum="3" >
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/padding_small"
-                    android:layout_weight="1"
-                    android:text="@string/pilih_foto"
-                    android:textColor="@color/white" />
-
-                <ImageView
-                    android:id="@+id/image_tambah"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_margin="@dimen/padding_small"
-                    android:layout_weight="1"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:id="@+id/ambil_foto"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/padding_small"
-                    android:layout_weight="1"
-                    android:textColor="@color/white" 
-                    android:text="@string/ambil_foto"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
                 android:layout_marginLeft="@dimen/padding_large"
                 android:layout_marginRight="@dimen/padding_large"
                 android:layout_marginTop="@dimen/padding_small"
                 android:orientation="horizontal"
-                android:weightSum="2" 
-                android:layout_marginBottom="@dimen/padding_medium">
+                android:weightSum="2" >
 
                 <Button
                     android:id="@+id/btn_simpan_tambah"
@@ -243,10 +211,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/padding_small"
                     android:layout_weight="1"
-                    android:text="@string/simpan" 
                     android:background="@drawable/bg_button"
                     android:padding="@dimen/padding_small"
-                    android:textColor="@color/white"/>
+                    android:text="@string/simpan"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btn_batal_tambah"
@@ -254,10 +222,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/padding_small"
                     android:layout_weight="1"
-                    android:text="@string/batal"
                     android:background="@drawable/bg_button"
-                    android:padding="@dimen/padding_small" 
-                    android:textColor="@color/white"/>
+                    android:padding="@dimen/padding_small"
+                    android:text="@string/batal"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

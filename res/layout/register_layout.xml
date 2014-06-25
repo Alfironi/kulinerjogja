@@ -21,7 +21,15 @@
         android:layout_height="@dimen/line_large"
         android:background="@color/blue" />
 
+    <ProgressBar 
+        android:id="@+id/progress_register"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
     <ScrollView
+        android:id="@+id/scroll_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_medium"
