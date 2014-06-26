@@ -124,11 +124,16 @@ public class LoginActivity extends Activity implements OnClickListener {
                                     && mPassField.getText().toString()
                                             .equals(mPass)) {
                                 isStatus = true;
+                                mSharedPreferences = getSharedPreferences("kkk",
+                                        Context.MODE_PRIVATE);
+                                mEditor = mSharedPreferences.edit();
+                                mEditor.putString("user", mUser);
+                                mEditor.commit();
                                 startActivity(new Intent(getApplicationContext(),
                                         MenuActivity.class));
                                 finish();
 
-                            } 
+                            }
                         }
 
                         if (isStatus) {

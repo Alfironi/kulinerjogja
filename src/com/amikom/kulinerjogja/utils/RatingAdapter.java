@@ -29,6 +29,7 @@ public class RatingAdapter extends BaseAdapter {
         TextView txtNomor;
         TextView txtNama;
         RatingBar rating;
+        TextView txtRest;
     }
     
     public void updateProduct(List<RatingModel> ratingModels) {
@@ -63,8 +64,9 @@ public class RatingAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.list_item_rating, null);
             holder = new ViewHolder();
             holder.txtNomor = (TextView) convertView.findViewById(R.id.no_rating);
-            holder.txtNama = (TextView) convertView.findViewById(R.id.nama_rating);
+            holder.txtNama = (TextView) convertView.findViewById(R.id.name_rating);
             holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
+            holder.txtRest = (TextView) convertView.findViewById(R.id.restoran_rating);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -73,6 +75,7 @@ public class RatingAdapter extends BaseAdapter {
         holder.txtNomor.setText(model.getmNomor());
         holder.txtNama.setText(model.getmNama());
         holder.rating.setRating(model.getmRating());
+        holder.txtRest.setText(model.getmRest());
         return convertView;
     }
 

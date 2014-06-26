@@ -217,7 +217,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/bg_button"
                     android:gravity="center"
-                    android:text="@string/bagikan"
+                    android:text="@string/submit_rating"
                     android:textColor="@color/white" />
             </LinearLayout>
 
@@ -226,9 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:isIndicator="true"
                 android:numStars="5"
-                android:rating="2.5"
                 android:stepSize="1.0" />
         </LinearLayout>
     </ScrollView>
