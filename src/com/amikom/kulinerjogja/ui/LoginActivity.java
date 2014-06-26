@@ -88,7 +88,7 @@ public class LoginActivity extends Activity implements OnClickListener {
             Toast.makeText(this, "Silahkan masukan username dan password !",
                     Toast.LENGTH_SHORT).show();
         } else {
-            final String url = "http://jogjakuliner.topmodis.com/admin/data/format/json";
+            final String url = "http://jogjakuliner.topmodis.com/users/data/format/json";
             AsyncHttpClient client = new AsyncHttpClient();
 
             LogManager.print("call API " + url);
@@ -119,7 +119,7 @@ public class LoginActivity extends Activity implements OnClickListener {
                         for (int i = 0; i < mJsonArray.length(); i++) {
                             JSONObject obj = mJsonArray.getJSONObject(i);
                             String mUser = obj.getString("username");
-                            String mPass = obj.getString("password");
+                            String mPass = obj.getString("encrypted_password");
                             if (mUserField.getText().toString().equals(mUser)
                                     && mPassField.getText().toString()
                                             .equals(mPass)) {
