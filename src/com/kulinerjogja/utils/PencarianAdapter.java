@@ -1,10 +1,10 @@
-package com.amikom.kulinerjogja.utils;
+package com.kulinerjogja.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.MakananModel;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.MakananModel;
 
 import android.app.Activity;
 import android.content.Context;

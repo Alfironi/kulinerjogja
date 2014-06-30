@@ -1,5 +1,5 @@
 
-package com.amikom.kulinerjogja.utils;
+package com.kulinerjogja.utils;
 
 import android.util.Log;
 

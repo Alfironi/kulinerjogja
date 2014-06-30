@@ -1,4 +1,4 @@
-package com.amikom.kulinerjogja.model;
+package com.kulinerjogja.model;
 
 public class UserModel {
 

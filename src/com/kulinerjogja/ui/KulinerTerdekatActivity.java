@@ -1,6 +1,6 @@
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
+import com.kulinerjogja.R;
 
 import android.app.Activity;
 import android.content.Intent;

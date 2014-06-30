@@ -4,13 +4,13 @@
  * This file is subject to the terms and conditions defined in
  * file 'LICENSE.txt', which is part of this source code package.
  */
-package com.amikom.kulinerjogja.utils;
+package com.kulinerjogja.utils;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.amikom.kulinerjogja.model.UserModel;
+import com.kulinerjogja.model.UserModel;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import android.content.ContentValues;

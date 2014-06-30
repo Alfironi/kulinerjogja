@@ -1,18 +1,18 @@
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.R;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.kulinerjogja.utils.LogManager;
 
 public class MapAcitivity extends FragmentActivity {
 

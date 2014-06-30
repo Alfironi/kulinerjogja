@@ -1,11 +1,14 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.utils.GPSTracker;
+import com.kulinerjogja.R;
+import com.kulinerjogja.utils.Constant;
+import com.kulinerjogja.utils.GPSTracker;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
@@ -24,12 +27,15 @@ public class MenuActivity extends Activity implements OnClickListener {
 
     private LinearLayout mSearch, mNear, mKategori, mRating, mTambah;
     private TextView textAddress;
+    private TextView logout;
     private Geocoder geocoder;
     private List<Address> address;
     private String add, city, country;
     private double latitude, longitude;
     private GPSTracker gps;
-
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -51,6 +57,7 @@ public class MenuActivity extends Activity implements OnClickListener {
         mKategori.setOnClickListener(this);
         mRating.setOnClickListener(this);
         mTambah.setOnClickListener(this);
+        logout.setOnClickListener(this);
     }
 
     private void initView() {
@@ -60,6 +67,7 @@ public class MenuActivity extends Activity implements OnClickListener {
         mRating = (LinearLayout) findViewById(R.id.rating_menu_layout);
         mTambah = (LinearLayout) findViewById(R.id.add_menu_layout);
         textAddress = (TextView) findViewById(R.id.near_distance_menu_layout);
+        logout = (TextView) findViewById(R.id.logout);
     }
 
     @Override
@@ -82,6 +90,16 @@ public class MenuActivity extends Activity implements OnClickListener {
                 startActivity(new Intent(MenuActivity.this,
                         TambahLokasiActivity.class));
                 break;
+            case R.id.logout:
+            	 mSharedPreferences = getSharedPreferences(Constant.PREFERENCES_NAME, Context.MODE_PRIVATE);
+                 mEditor = mSharedPreferences.edit();
+                 mEditor.putBoolean(Constant.IS_LOGIN, false);
+                 mEditor.putString("user", "");
+                 mEditor.commit();
+            	startActivity(new Intent(MenuActivity.this,
+                        LoginActivity.class));
+            	finish();
+            	break;
             default:
                 break;
         }

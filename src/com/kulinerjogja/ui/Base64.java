@@ -1,5 +1,5 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
 /**
  * <p>

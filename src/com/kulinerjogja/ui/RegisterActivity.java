@@ -1,9 +1,9 @@
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.UserModel;
-import com.amikom.kulinerjogja.utils.DBAdapter;
-import com.amikom.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.UserModel;
+import com.kulinerjogja.utils.DBAdapter;
+import com.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;

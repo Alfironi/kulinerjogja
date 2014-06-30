@@ -1,11 +1,11 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.UserModel;
-import com.amikom.kulinerjogja.utils.Constant;
-import com.amikom.kulinerjogja.utils.DBAdapter;
-import com.amikom.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.UserModel;
+import com.kulinerjogja.utils.Constant;
+import com.kulinerjogja.utils.DBAdapter;
+import com.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -70,7 +70,7 @@ public class LoginActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login_btn:
-                // login();
+//                 login();
                 userLogin();
                 break;
             case R.id.register_btn:
@@ -124,9 +124,10 @@ public class LoginActivity extends Activity implements OnClickListener {
                                     && mPassField.getText().toString()
                                             .equals(mPass)) {
                                 isStatus = true;
-                                mSharedPreferences = getSharedPreferences("kkk",
-                                        Context.MODE_PRIVATE);
+
+                                mSharedPreferences = getSharedPreferences(Constant.PREFERENCES_NAME, Context.MODE_PRIVATE);
                                 mEditor = mSharedPreferences.edit();
+                                mEditor.putBoolean(Constant.IS_LOGIN, true);
                                 mEditor.putString("user", mUser);
                                 mEditor.commit();
                                 startActivity(new Intent(getApplicationContext(),
@@ -161,7 +162,6 @@ public class LoginActivity extends Activity implements OnClickListener {
         }
     }
 
-    @Deprecated
     /*
      * Event click button Login (tidak dipakai lagi)
      */

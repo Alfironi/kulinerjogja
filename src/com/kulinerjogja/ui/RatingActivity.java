@@ -1,10 +1,10 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.RatingModel;
-import com.amikom.kulinerjogja.utils.LogManager;
-import com.amikom.kulinerjogja.utils.RatingAdapter;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.RatingModel;
+import com.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.utils.RatingAdapter;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 

@@ -1,8 +1,8 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.fragment.KategoriFragment;
+import com.kulinerjogja.R;
+import com.kulinerjogja.fragment.KategoriFragment;
 
 import android.graphics.Color;
 import android.os.Bundle;

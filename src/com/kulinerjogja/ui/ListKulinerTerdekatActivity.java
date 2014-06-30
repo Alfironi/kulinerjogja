@@ -1,11 +1,11 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.KategoriModel;
-import com.amikom.kulinerjogja.utils.GPSTracker;
-import com.amikom.kulinerjogja.utils.KategoriAdapter;
-import com.amikom.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.KategoriModel;
+import com.kulinerjogja.utils.GPSTracker;
+import com.kulinerjogja.utils.KategoriAdapter;
+import com.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
