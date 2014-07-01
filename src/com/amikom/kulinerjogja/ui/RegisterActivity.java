@@ -1,3 +1,4 @@
+
 package com.amikom.kulinerjogja.ui;
 
 import com.amikom.kulinerjogja.R;
@@ -10,7 +11,6 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,115 +30,115 @@ import android.widget.Toast;
 
 public class RegisterActivity extends Activity implements OnClickListener {
 
-	private EditText mUser;
-	private EditText mPass;
-	private EditText mEmail;
-	private EditText mAlamat;
-	private RadioButton mLk;
-	private RadioButton mPr;
-	private RadioGroup mJk;
-	private Button mDaftar;
-	private DBAdapter db;
-	private ProgressBar mProgress;
-	private ScrollView mScroll;
+    private EditText mUser;
+    private EditText mPass;
+    private EditText mEmail;
+    private EditText mAlamat;
+    private RadioButton mLk;
+    private RadioButton mPr;
+    private RadioGroup mJk;
+    private Button mDaftar;
+    private DBAdapter db;
+    private ProgressBar mProgress;
+    private ScrollView mScroll;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.register_layout);
-		db = DBAdapter.getInstance(this);
-		initview();
-	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.register_layout);
+        db = DBAdapter.getInstance(this);
+        initview();
+    }
 
-	private void initview() {
-		mProgress = (ProgressBar) findViewById(R.id.progress_register);
-		mScroll = (ScrollView) findViewById(R.id.scroll_register);
+    private void initview() {
+        mProgress = (ProgressBar) findViewById(R.id.progress_register);
+        mScroll = (ScrollView) findViewById(R.id.scroll_register);
 
-		mUser = (EditText) findViewById(R.id.username_register);
-		mPass = (EditText) findViewById(R.id.password_register);
-		mDaftar = (Button) findViewById(R.id.register);
-		mEmail = (EditText) findViewById(R.id.email_register);
-		mAlamat = (EditText) findViewById(R.id.address_register);
-		mLk = (RadioButton) findViewById(R.id.male_radio_register);
-		mPr = (RadioButton) findViewById(R.id.female_radio_register);
-		mJk = (RadioGroup) findViewById(R.id.jk_register);
-		mDaftar.setOnClickListener(this);
-	}
+        mUser = (EditText) findViewById(R.id.username_register);
+        mPass = (EditText) findViewById(R.id.password_register);
+        mDaftar = (Button) findViewById(R.id.register);
+        mEmail = (EditText) findViewById(R.id.email_register);
+        mAlamat = (EditText) findViewById(R.id.address_register);
+        mLk = (RadioButton) findViewById(R.id.male_radio_register);
+        mPr = (RadioButton) findViewById(R.id.female_radio_register);
+        mJk = (RadioGroup) findViewById(R.id.jk_register);
+        mDaftar.setOnClickListener(this);
+    }
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.register:
-			// Log.d("Register", "Register}}}");
-			// insertUser();
-			// Log.d("Register", "Register>>>");
-			register();
-			break;
-		default:
-			break;
-		}
-	}
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.register:
+                // Log.d("Register", "Register}}}");
+                // insertUser();
+                // Log.d("Register", "Register>>>");
+                register();
+                break;
+            default:
+                break;
+        }
+    }
 
-	private void register() {
+    private void register() {
 
-		if (mUser.getText().toString().equals("")
-				|| mPass.getText().toString().equals("")
-				|| mEmail.getText().toString().equals("")
-				|| mAlamat.getText().toString().equals("")
-				|| (mJk.getCheckedRadioButtonId() == -1)) {
-			// Jika data yang diinputkan tidak lengkap
-			Toast.makeText(this, "Data harus lengkap", Toast.LENGTH_LONG)
-					.show();
-		} else {
-			String urlUser = "http://jogjakuliner.topmodis.com/index.php/users/username/format/json/name/"
-					+ mUser.getText().toString();
-			AsyncHttpClient client = new AsyncHttpClient();
-			client.get(urlUser, new JsonHttpResponseHandler() {
+        if (mUser.getText().toString().equals("")
+                || mPass.getText().toString().equals("")
+                || mEmail.getText().toString().equals("")
+                || mAlamat.getText().toString().equals("")
+                || (mJk.getCheckedRadioButtonId() == -1)) {
+            // Jika data yang diinputkan tidak lengkap
+            Toast.makeText(this, "Data harus lengkap", Toast.LENGTH_LONG)
+                    .show();
+        } else {
+            String urlUser = "http://jogjakuliner.topmodis.com/index.php/users/username/format/json/name/"
+                    + mUser.getText().toString();
+            AsyncHttpClient client = new AsyncHttpClient();
+            client.get(urlUser, new JsonHttpResponseHandler() {
 
-				@Override
-				public void onStart() {
-					mProgress.setVisibility(View.VISIBLE);
-					mScroll.setVisibility(View.GONE);
-				}
+                @Override
+                public void onStart() {
+                    mProgress.setVisibility(View.VISIBLE);
+                    mScroll.setVisibility(View.GONE);
+                }
 
-				@Override
-				public void onFinish() {
-					mProgress.setVisibility(View.GONE);
-					mScroll.setVisibility(View.VISIBLE);
-				}
+                @Override
+                public void onFinish() {
+                    mProgress.setVisibility(View.GONE);
+                    mScroll.setVisibility(View.VISIBLE);
+                }
 
-				@Override
-				public void onSuccess(int statusCode, Header[] headers,
-						JSONObject response) {
-					try {
-						if (response.getJSONArray("data-list").length() == 0) {
-							submit();
-						} else {
-							Toast.makeText(
-									getApplicationContext(),
-									"Username "
-											+ mUser.getText().toString()
-											+ " sudah ada! Silahkan coba yang lain.",
-									Toast.LENGTH_LONG).show();
-						}
-					} catch (JSONException e) {
-						e.printStackTrace();
-					}
-				}
+                @Override
+                public void onSuccess(int statusCode, Header[] headers,
+                        JSONObject response) {
+                    try {
+                        if (response.getJSONArray("data-list").length() == 0) {
+                            submit();
+                        } else {
+                            Toast.makeText(
+                                    getApplicationContext(),
+                                    "Username "
+                                            + mUser.getText().toString()
+                                            + " sudah ada! Silahkan coba yang lain.",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
 
-				@Override
-				public void onFailure(int statusCode, Header[] headers,
-						String responseString, Throwable throwable) {
-					Toast.makeText(getApplicationContext(),
-							"Ada masalah koneksi", Toast.LENGTH_LONG).show();
-				}
-			});
+                @Override
+                public void onFailure(int statusCode, Header[] headers,
+                        String responseString, Throwable throwable) {
+                    Toast.makeText(getApplicationContext(),
+                            "Ada masalah koneksi", Toast.LENGTH_LONG).show();
+                }
+            });
 
-		}
-	}
+        }
+    }
 
-	private void submit() {
+    private void submit() {
 		String url = "http://jogjakuliner.topmodis.com/users/data";
 		AsyncHttpClient client = new AsyncHttpClient();
 
@@ -183,34 +183,35 @@ public class RegisterActivity extends Activity implements OnClickListener {
 				Toast.makeText(getApplicationContext(),
 						"Gagal Menyimpan, masalah koneksi", Toast.LENGTH_LONG)
 						.show();
+				LogManager.print("error = "+arg3.getMessage());
 			}
 		});
 	}
 
-	@Deprecated
-	/*
-	 * Event click button Daftar(tidak dipakai lagi)
-	 */
-	private void insertUser() {
-		if (mUser.getText().toString().equals("")
-				|| mPass.getText().toString().equals("")
-				|| mEmail.getText().toString().equals("")
-				|| mAlamat.getText().toString().equals("")
-				|| (mJk.getCheckedRadioButtonId() == -1)) {
-			// Jika data yang diinputkan tidak lengkap
-			Toast.makeText(this, "Data harus lengkap", Toast.LENGTH_LONG)
-					.show();
-		} else {
-			UserModel model = new UserModel();
-			model.setUser(mUser.getText().toString());
-			model.setPassword(mPass.getText().toString());
-			if (db.insertUser(model)) {
-				startActivity(new Intent(this, MenuActivity.class));
-				finish();
-			} else {
-				Toast.makeText(this, "Gagal insert user !!!", Toast.LENGTH_LONG)
-						.show();
-			}
-		}
-	}
+    @Deprecated
+    /*
+     * Event click button Daftar(tidak dipakai lagi)
+     */
+    private void insertUser() {
+        if (mUser.getText().toString().equals("")
+                || mPass.getText().toString().equals("")
+                || mEmail.getText().toString().equals("")
+                || mAlamat.getText().toString().equals("")
+                || (mJk.getCheckedRadioButtonId() == -1)) {
+            // Jika data yang diinputkan tidak lengkap
+            Toast.makeText(this, "Data harus lengkap", Toast.LENGTH_LONG)
+                    .show();
+        } else {
+            UserModel model = new UserModel();
+            model.setUser(mUser.getText().toString());
+            model.setPassword(mPass.getText().toString());
+            if (db.insertUser(model)) {
+                startActivity(new Intent(this, MenuActivity.class));
+                finish();
+            } else {
+                Toast.makeText(this, "Gagal insert user !!!", Toast.LENGTH_LONG)
+                        .show();
+            }
+        }
+    }
 }

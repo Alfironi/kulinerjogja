@@ -81,7 +81,7 @@ public class RatingActivity extends Activity {
                     for (int i = 0; i < mJsonArray.length(); i++) {
                         JSONObject obj = mJsonArray.getJSONObject(i);
                         String nomor = String.valueOf(i + 1);
-                        String nama = obj.getString("name");
+                        String nama = obj.getString("username");
                         String restoran = obj.getString("nama_restoran");
                         int rating = Integer.valueOf(obj.getString("jumlah_rating"));
 
