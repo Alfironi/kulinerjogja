@@ -1,8 +1,8 @@
 
-package com.amikom.kulinerjogja.utils;
+package com.kulinerjogja.utils;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.KategoriModel;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.RatingModel;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class KategoriAdapter extends BaseAdapter {
+public class RatingAdapter extends BaseAdapter {
     Context mContext;
-    List<KategoriModel> mItems;
+    List<RatingModel> mItems;
 
-    public KategoriAdapter(Context mContext, List<KategoriModel> mItems) {
+    public RatingAdapter(Context mContext, List<RatingModel> mItems) {
         super();
         this.mContext = mContext;
         this.mItems = mItems;
@@ -29,9 +29,10 @@ public class KategoriAdapter extends BaseAdapter {
         TextView txtNomor;
         TextView txtNama;
         RatingBar rating;
+        TextView txtRest;
     }
-
-    public void updateProduct(List<KategoriModel> ratingModels) {
+    
+    public void updateProduct(List<RatingModel> ratingModels) {
         // TODO Auto-generated method stub
         this.mItems = ratingModels;
     }
@@ -58,18 +59,23 @@ public class KategoriAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
         ViewHolder holder = null;
-        LayoutInflater mInflater = (LayoutInflater) mContext
-                .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater mInflater = (LayoutInflater) mContext.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.list_item_kategori, null);
+            convertView = mInflater.inflate(R.layout.list_item_rating, null);
             holder = new ViewHolder();
-            holder.txtNama = (TextView) convertView.findViewById(R.id.txt_list_kategori);
+            holder.txtNomor = (TextView) convertView.findViewById(R.id.no_rating);
+            holder.txtNama = (TextView) convertView.findViewById(R.id.name_rating);
+            holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
+            holder.txtRest = (TextView) convertView.findViewById(R.id.restoran_rating);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        KategoriModel model = (KategoriModel) getItem(position);
+        RatingModel model = (RatingModel) getItem(position);
+        holder.txtNomor.setText(model.getmNomor());
         holder.txtNama.setText(model.getmNama());
+        holder.rating.setRating(model.getmRating());
+        holder.txtRest.setText(model.getmRest());
         return convertView;
     }
 

@@ -1,10 +1,10 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.MakananModel;
-import com.amikom.kulinerjogja.utils.LogManager;
-import com.amikom.kulinerjogja.utils.PencarianAdapter;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.MakananModel;
+import com.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.utils.PencarianAdapter;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 

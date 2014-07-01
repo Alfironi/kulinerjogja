@@ -1,8 +1,8 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.utils.Constant;
+import com.kulinerjogja.R;
+import com.kulinerjogja.utils.Constant;
 
 import android.app.Activity;
 import android.content.Context;
@@ -26,15 +26,13 @@ public class SplashActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                finish();
-//                if (!mSharedPreferences.getBoolean(Constant.IS_LOGIN, false)) {
-//        			startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-//        			finish();
-//        		}else{
-//        			startActivity(new Intent(SplashActivity.this, MenuActivity.class));
-//        			finish();
-//        		}
+                if (!mSharedPreferences.getBoolean(Constant.IS_LOGIN, false)) {
+        			startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+        			finish();
+        		}else{
+        			startActivity(new Intent(SplashActivity.this, MenuActivity.class));
+        			finish();
+        		}
             }
         }, SPLASH_TIME_OUT);
     }

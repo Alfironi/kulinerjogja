@@ -1,8 +1,8 @@
-package com.amikom.kulinerjogja.utils;
+package com.kulinerjogja.utils;
 
 import android.content.Context;
 
-import com.amikom.kulinerjogja.ui.MenuActivity;
+import com.kulinerjogja.ui.MenuActivity;
 
 public class Constant {
 

@@ -1,10 +1,10 @@
 
-package com.amikom.kulinerjogja.ui;
+package com.kulinerjogja.ui;
 
-import com.amikom.kulinerjogja.R;
-import com.amikom.kulinerjogja.model.UserModel;
-import com.amikom.kulinerjogja.utils.DBAdapter;
-import com.amikom.kulinerjogja.utils.LogManager;
+import com.kulinerjogja.R;
+import com.kulinerjogja.model.UserModel;
+import com.kulinerjogja.utils.DBAdapter;
+import com.kulinerjogja.utils.LogManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -139,54 +139,54 @@ public class RegisterActivity extends Activity implements OnClickListener {
     }
 
     private void submit() {
-		String url = "http://jogjakuliner.topmodis.com/users/data";
-		AsyncHttpClient client = new AsyncHttpClient();
+        String url = "http://jogjakuliner.topmodis.com/users/data";
+        AsyncHttpClient client = new AsyncHttpClient();
 
-		RequestParams params = new RequestParams();
-		params.put("username", mUser.getText().toString());
-		params.put("alamat", mAlamat.getText().toString());
-		params.put("email", mEmail.getText().toString());
-		params.put("encrypted_password", mPass.getText().toString());
-		if (mLk.isSelected()) {
-			params.put("jenis_kelamin", "Laki-laki");
-		} else {
-			params.put("jenis_kelamin", "Perempuan");
-		}
-		client.post(url, params, new AsyncHttpResponseHandler() {
-			@Override
-			public void onStart() {
-				LogManager.print("onstart");
-				mProgress.setVisibility(View.VISIBLE);
-				mScroll.setVisibility(View.GONE);
-			}
+        RequestParams params = new RequestParams();
+        params.put("username", mUser.getText().toString());
+        params.put("alamat", mAlamat.getText().toString());
+        params.put("email", mEmail.getText().toString());
+        params.put("encrypted_password", mPass.getText().toString());
+        if (mLk.isChecked()) {
+            params.put("jenis_kelamin", "L");
+        } else {
+            params.put("jenis_kelamin", "P");
+        }
+        client.post(url, params, new AsyncHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                LogManager.print("onstart");
+                mProgress.setVisibility(View.VISIBLE);
+                mScroll.setVisibility(View.GONE);
+            }
 
-			@Override
-			public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-				LogManager.print("onsucces1");
-				Toast.makeText(getApplicationContext(),
-						"Data berhasil ditambahkan", Toast.LENGTH_LONG).show();
-				startActivity(new Intent(RegisterActivity.this,
-						LoginActivity.class));
-				finish();
-			}
+            @Override
+            public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
+                LogManager.print("onsucces1");
+                Toast.makeText(getApplicationContext(),
+                        "Data berhasil ditambahkan", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(RegisterActivity.this,
+                        LoginActivity.class));
+                finish();
+            }
 
-			@Override
-			public void onFinish() {
-				LogManager.print("onfinish");
-				mProgress.setVisibility(View.GONE);
-				mScroll.setVisibility(View.VISIBLE);
-			}
+            @Override
+            public void onFinish() {
+                LogManager.print("onfinish");
+                mProgress.setVisibility(View.GONE);
+                mScroll.setVisibility(View.VISIBLE);
+            }
 
-			@Override
-			public void onFailure(int arg0, Header[] arg1, byte[] arg2,
-					Throwable arg3) {
-				Toast.makeText(getApplicationContext(),
-						"Gagal Menyimpan, masalah koneksi", Toast.LENGTH_LONG)
-						.show();
-				LogManager.print("error = "+arg3.getMessage());
-			}
-		});
-	}
+            @Override
+            public void onFailure(int arg0, Header[] arg1, byte[] arg2,
+                    Throwable arg3) {
+                Toast.makeText(getApplicationContext(),
+                        "Gagal Menyimpan, masalah koneksi", Toast.LENGTH_LONG)
+                        .show();
+                LogManager.print("error = " + arg3.getMessage());
+            }
+        });
+    }
 
     @Deprecated
     /*
